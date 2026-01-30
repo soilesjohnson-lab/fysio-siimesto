@@ -1,0 +1,18 @@
+# node
+node_modules
+cms/node_modules
+
+# build
+dist
+.cms-build
+
+# env
+.env
+.env.local
+
+# sanity
+cms/.sanity
+cms/dist
+
+# misc
+.DS_Store
