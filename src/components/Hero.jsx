@@ -24,11 +24,6 @@ export default function Hero() {
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
         
-        {/* Yläotsikko / Tagline */}
-        <span className="block text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/80 mb-6 font-medium" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-          Kokonaisvaltaista hyvinvointia Joensuussa
-        </span>
-
         {/* Pääotsikko - Lihavoitu ja selkeä */}
         <h1 
           className="text-4xl md:text-6xl font-bold text-white mb-8" 

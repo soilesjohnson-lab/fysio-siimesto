@@ -17,11 +17,11 @@ export default function Home() {
     <div className="bg-white min-h-screen">
       <Hero />
 
-      {/* Esittelyosio (About Section) */}
+      {/* Esittelyosio */}
       <section className="py-32 px-6 md:px-20 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-20 items-center">
           
-          {/* Kuvaosio - Mirkka-tyylinen pystykuva */}
+          {/* Kuvaosio */}
           <div className="relative">
             <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-sm">
               <img 
@@ -30,8 +30,6 @@ export default function Home() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-            {/* Koriste-elementti: ohut viiva kuvan takana/vieressä */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r border-b border-gray-100 -z-10"></div>
           </div>
 
           {/* Tekstiosio */}

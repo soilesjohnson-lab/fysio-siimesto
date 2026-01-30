@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
-    color: "#b0b0b0", // Pehmeä, keskiharmaa teksti
+    color: "#b0b0b0",
   };
 
   const iconStyle = {
@@ -15,7 +15,6 @@ export default function Footer() {
   };
 
   return (
-    /* Taustaväri: Pehmeä tummanharmaa, napakka pystysuuntainen padding */
     <footer className="bg-[#3a3a3a] pt-20 pb-12 text-center">
       <div className="max-w-7xl mx-auto px-10">
         
