@@ -23,8 +23,8 @@ export default function Hero() {
     
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
-        
-        {/* Pääotsikko - Lihavoitu ja selkeä */}
+
+        {/* Pääotsikko */}
         <h1 
           className="text-4xl md:text-6xl font-bold text-white mb-8" 
           style={titleStyle}
@@ -40,7 +40,7 @@ export default function Hero() {
           Tarjoamme perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
         </p>
 
-        {/* Palautettu tyylikäs lasimainen nappi */}
+        {/* Nappi */}
         <div className="flex justify-center">
           <a 
             href="/booking" 
