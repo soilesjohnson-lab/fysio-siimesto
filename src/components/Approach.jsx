@@ -8,7 +8,7 @@ const offerings = [
     result: "jotta voit liikkua vapaasti ja nauttia aktiivisesta arjesta ilman rajoitteita.",
   },
   {
-    title: "Psykofyysinen Lähestymistapa",
+    title: "Psykofyysinen fysioterapia",
     benefit: "Vahvista hermostollista turvaa ja palautumista,",
     result: "jotta kehosi voi rauhoittua ja jaksamisesi lisääntyä.",
   },
