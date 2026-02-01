@@ -1,3 +1,6 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom'; // Tuodaan NavLink
+
 export default function Hero() {
   const titleStyle = {
     fontFamily: "'Montserrat', sans-serif",
@@ -40,15 +43,15 @@ export default function Hero() {
           Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
         </p>
 
-        {/* Nappi */}
+        {/* Nappi - Muutettu NavLinkiksi */}
         <div className="flex justify-center">
-          <a 
-            href="/booking" 
+          <NavLink 
+            to="/booking" 
             className="px-12 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white text-[10px] tracking-[0.3em] uppercase font-medium hover:bg-white hover:text-gray-900 transition-all duration-500 rounded-sm"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
             Varaa aika
-          </a>
+          </NavLink>
         </div>
       </div>
     </section>
