@@ -29,7 +29,7 @@ export default function Hero() {
           className="text-4xl md:text-6xl font-bold text-white mb-8" 
           style={titleStyle}
         >
-          Fysioterapia, jossa keho ja mieli kohtaavat
+          Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien
         </h1>
 
         {/* Leipäteksti */}
@@ -37,7 +37,7 @@ export default function Hero() {
           className="max-w-2xl mx-auto text-base md:text-xl font-light leading-relaxed mb-12" 
           style={subTextStyle}
         >
-          Tarjoamme perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
+          Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
         </p>
 
         {/* Nappi */}

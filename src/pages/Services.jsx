@@ -35,6 +35,11 @@ const Services = () => {
     color: '#1a1a1a'
   };
 
+  /* Scrollaa sivun alkuun kun sivulle kirjaudutaan */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     /* Tausta pidetään raikkaana ja ilmavana */
     <div className="bg-white min-h-screen py-24 px-6 md:px-12">

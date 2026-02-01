@@ -1,35 +1,42 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const offerings = [
   {
-    title: "Kokonaisvaltainen Fysioterapia",
-    benefit: "Vapaudu kivusta ja jännityksestä,",
+    title: "Fysioterapia",
+    benefit: "Paranna toimintakykyäsi ja vapaudu kivusta,",
     result: "jotta voit liikkua vapaasti ja nauttia aktiivisesta arjesta ilman rajoitteita.",
   },
   {
     title: "Psykofyysinen Lähestymistapa",
-    benefit: "Vahvista hermostollista turvaa ja läsnäoloa,",
-    result: "jotta voit hallita stressiä paremmin ja löytää pysyvän tasapainon kehon ja mielen välille.",
+    benefit: "Vahvista hermostollista turvaa ja palautumista,",
+    result: "jotta kehosi voi rauhoittua ja jaksamisesi lisääntyä.",
   },
   {
     title: "Rentouttavat Hoidot",
-    benefit: "Anna itsellesi lupa pysähtyä lämmön äärelle,",
-    result: "jotta palautumisesi syvenee ja mielesi saa kaipaamansa hiljaisuuden.",
+    benefit: "Rentouttavat hoidot ja Personal trainer-palvelut",
+    result: "Rentouttavia hoitoja palautumisen tueksi sekä kehoa kuuntelevaa valmennusta.",
   }
 ];
 
 export default function Approach() {
+
+      const links = [
+        { to: '/services', label: 'Palvelut' }
+    ];
+
   return (
     <section className="py-24 bg-white px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Otsikko-osa Mirkan tyyliin */}
+
+        {/* Otsikko */}
         <div className="text-center mb-20 space-y-4">
           <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-light block">
             Fysio Siimestö
           </span>
           <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight">
-            Syvää mielenrauhaa ja <br className="hidden md:block" /> 
-            kestävää kehollista voimaa
+            Kestävää kehollista voimaa ja <br className="hidden md:block" /> 
+            syvää mielenrauhaa.
           </h2>
         </div>
 
@@ -57,16 +64,15 @@ export default function Approach() {
 
         {/* CTA-nappi */}
         <div className="mt-20 text-center">
-          <a 
-            href="https://vello.fi/fysiosiimesto" 
-            target="_blank"
-            rel="noopener noreferrer"
+        <NavLink 
+            to="/services" 
             className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"
-          >
-            Varaa aikasi tästä
-            {/* Pieni korostusviiva napin alla */}
+        >
+            Tutustu palveluihin
+            
+            {/* Tämä on se hover-viiva, joka pidentyy group-hoverin ansiosta */}
             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span>
-          </a>
+        </NavLink>
         </div>
       </div>
     </section>
