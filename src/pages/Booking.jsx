@@ -1,11 +1,16 @@
 export default function Booking() {
 
-    // Tyylivakio otsikolle
+  // Tyylivakio otsikolle
   const titleStyle = {
     fontFamily: "'Montserrat', sans-serif",
     letterSpacing: '0.3em',
     color: '#1a1a1a'
   };
+
+  /* Scrollaa sivun alkuun kun sivulle kirjaudutaan */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
         /* Tausta pidetään raikkaana ja ilmavana */
