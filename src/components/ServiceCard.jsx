@@ -9,8 +9,9 @@ const ServiceCard = ({ title, description, image, options, link }) => {
   };
 
   return (
-    /* Kortti: Ei reunoja, tilava varjo ja minimaalinen pyöristys */
-    <div className="bg-white rounded-sm shadow-xl flex flex-col overflow-hidden min-h-[550px]">
+    
+    /* Kortti */
+    <div className="bg-white rounded-sm shadow-xl flex flex-col overflow-hidden min-h-[550px] transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-2xl">
       
       {/* Kuva */}
       {image && (
