@@ -68,18 +68,20 @@ export default function Contact() {
               Vastaanotto
             </h3>
             
-            {/* Kartta - Suoraviivaisempi tyyli */}
+            {/* Sijainti */}
             <div className="relative w-full pb-[60%] overflow-hidden rounded-sm grayscale-[0.5] hover:grayscale-0 transition-all duration-500">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1883.2104523098553!2d29.7715!3d62.6001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjLCsDM2JzAwLjQiTiAyOcKwNDYnMTcuNCJF!5e0!3m2!1sfi!2sfi!4v161234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.2894790911687!2d29.773324193769117!3d62.611034912366016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469b865fbf57aab5%3A0x870eaefd3ea08ba2!2sTeollisuuskatu%2011%2C%2080100%20Joensuu!5e1!3m2!1sfi!2sfi!4v1770414935106!5m2!1sfi!2sfi"
                 title="Fysio Siimestö"
                 className="absolute top-0 left-0 w-full h-full border-0"
-                allowFullScreen=""
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
 
-            {/* Yhteystiedot tekstinä */}
+            {/* Yhteystiedot */}
             <div className="pt-6 space-y-4">
               <div className="text-[11px] tracking-[0.2em] uppercase font-light leading-relaxed" style={textStyle}>
                 <p className="text-gray-900 font-medium mb-1">Fysio Siimestö</p>
