@@ -23,10 +23,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex items-center justify-between h-24">
 
-          {/* Logo / Nimi - Samalla tyylillä kuin footeri */}
+          {/* Logo */}
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-sm tracking-[0.4em] uppercase font-light text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              Fysio Siimestö
+            <NavLink to="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Fysio Siimestö"
+                className="h-10 w-auto"
+              />
             </NavLink>
           </div>
 
