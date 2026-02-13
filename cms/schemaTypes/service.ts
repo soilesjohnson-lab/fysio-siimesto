@@ -53,8 +53,7 @@ export default {
     {
       name: 'orderIndex',
       title: 'Järjestys',
-      type: 'number',
-      description: 'Mitä pienempi numero, sitä ylemmäksi kortti tulee.'
+      type: 'number'
     }
   ]
 };
