@@ -54,6 +54,11 @@ export default {
       name: 'orderIndex',
       title: 'Järjestys',
       type: 'number'
+    },
+    {
+      name: 'content',
+      title: 'Sisältöteksti',
+      type: 'text'
     }
   ]
 };

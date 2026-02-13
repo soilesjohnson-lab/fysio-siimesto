@@ -1,16 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ServiceCard = ({ title, description, image, options, link }) => {
-  const finalLink = link || "#";
-
+const ServiceCard = ({ title, description, image, options, id }) => {
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
     color: "#777777",
   };
 
   return (
-    
-    /* Kortti */
     <div className="bg-white rounded-sm shadow-xl flex flex-col overflow-hidden min-h-[550px] transition-all duration-500 ease-out hover:scale-[1.01] hover:shadow-2xl">
       
       {/* Kuva */}
@@ -52,15 +49,15 @@ const ServiceCard = ({ title, description, image, options, link }) => {
           </div>
         )}
 
-        {/* Nappi: Ei reunoja, vain hillitty tausta ja pieni pyöristys */}
+        {/* Nappi */}
         <div className="mt-auto pt-2">
-          <a 
-            href={finalLink} 
+          <Link
+            to={`/services/${id}`}
             className="inline-block px-8 py-3 bg-gray-100 text-gray-600 text-[10px] tracking-[0.2em] uppercase font-medium rounded-sm hover:bg-gray-200 transition-colors duration-200"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
-          > 
-            Katso lisää 
-          </a>
+          >
+            Katso lisää
+          </Link>
         </div>
       </div>
     </div>
