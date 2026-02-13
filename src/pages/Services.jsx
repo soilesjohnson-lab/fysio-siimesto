@@ -9,12 +9,14 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const query = `*[_type == "service"]{
+        // Hae palvelut Sanitystä orderIndexin mukaan
+        const query = `*[_type == "service"] | order(orderIndex asc){
           _id,
           name,
           description,
           options,
-          "image": image.asset->url
+          "image": image.asset->url,
+          orderIndex
         }`;
         const data = await client.fetch(query);
         setServices(data);
@@ -35,17 +37,16 @@ const Services = () => {
     color: '#1a1a1a'
   };
 
-  /* Scrollaa sivun alkuun kun sivulle kirjaudutaan */
+  // Scrollaa sivun alkuun kun sivulle kirjaudutaan
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    /* Tausta pidetään raikkaana ja ilmavana */
     <div className="bg-white min-h-screen py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         
-        {/* Otsikko: minimalistinen ja ilmava */}
+        {/* Otsikko */}
         <div className="mb-20 text-center">
           <h1 className="text-2xl md:text-3xl uppercase font-light" style={titleStyle}>
             Palvelumme
@@ -53,10 +54,10 @@ const Services = () => {
           <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto"></div>
         </div>
 
+        {/* Kortit */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {loading
             ? Array(6).fill(0).map((_, idx) => (
-                /* Skeleton vastaamaan uutta korttityyliä: rounded-sm, ei paksuja varjoja */
                 <div
                   key={idx}
                   className="bg-gray-50 rounded-sm shadow-sm animate-pulse h-[550px]"

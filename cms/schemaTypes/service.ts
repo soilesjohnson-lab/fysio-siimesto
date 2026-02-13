@@ -19,7 +19,7 @@ export default {
     {
       name: 'description',
       title: 'Kuvaus',
-      type: 'text' // pitempi kuvaus kuin string
+      type: 'text'
     },
     {
       name: 'options',
@@ -41,19 +41,20 @@ export default {
             }
           ],
           preview: {
-            select: {
-              time: 'time',
-              price: 'price'
-            },
+            select: { time: 'time', price: 'price' },
             prepare(selection: { time?: number; price?: number }) {
               const { time, price } = selection;
-              return {
-                title: `${time ?? '-'} min – ${price ?? '-'} €`
-              };
+              return { title: `${time ?? '-'} min – ${price ?? '-'} €` };
             }
           }
         }
       ]
+    },
+    {
+      name: 'orderIndex',
+      title: 'Järjestys',
+      type: 'number',
+      description: 'Mitä pienempi numero, sitä ylemmäksi kortti tulee.'
     }
   ]
 };
