@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function Booking() {
 
   // Tyylivakio otsikolle
@@ -13,11 +15,11 @@ export default function Booking() {
   }, []);
 
   return (
-        /* Tausta pidetään raikkaana ja ilmavana */
+        /* Tausta */
     <div className="bg-white min-h-screen py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         
-        {/* Otsikko: minimalistinen ja ilmava */}
+        {/* Otsikko */}
         <div className="mb-20 text-center">
           <h1 className="text-2xl md:text-3xl uppercase font-light" style={titleStyle}>
             Varaa aika

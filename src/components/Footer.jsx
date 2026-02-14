@@ -15,10 +15,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#3a3a3a] pt-20 pb-12 text-center">
+    <footer className="bg-[#3a3a3a] pt-10 pb-0 text-center">
       <div className="max-w-7xl mx-auto px-10">
         
-        {/* Pääosio: Nimi ja Somet yhdessä tyylikkäässä paketissa */}
+        {/* Pääosio */}
         <div className="flex flex-col items-center">
           <h3 className="text-xs tracking-[0.5em] uppercase font-light text-white mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Fysio Siimestö
@@ -47,8 +47,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Alapalkki: Huomaamaton viiva ja lakitekstit */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] tracking-[0.25em] uppercase font-light opacity-50" style={textStyle}>
+        {/* Alapalkki */}
+        {/* <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] tracking-[0.25em] uppercase font-light opacity-50" style={textStyle}>
           <div className="mb-4 md:mb-0">
             © {new Date().getFullYear()} Fysio Siimestö
           </div>
@@ -58,7 +58,7 @@ export default function Footer() {
               Tietosuojaseloste
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
