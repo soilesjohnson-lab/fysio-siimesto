@@ -1,4 +1,5 @@
 import React from 'react';
+import scrollToTop from "../hooks/scrollToTop";
 
 export default function Contact() {
   const textStyle = {
@@ -6,32 +7,24 @@ export default function Contact() {
     color: "#777777",
   };
 
-  const titleStyle = {
-    fontFamily: "'Montserrat', sans-serif",
-    letterSpacing: '0.3em',
-    color: '#1a1a1a'
-  };
+  scrollToTop();
 
   return (
     /* Tausta pidetään puhtaana valkoisena */
     <div className="bg-white min-h-screen py-24 px-6">
       <div className="max-w-6xl mx-auto">
         
-        {/* Otsikko-osio */}
+        {/* Otsikko */}
         <div className="mb-20 text-center">
-          <h2 className="text-2xl md:text-3xl uppercase font-light" style={titleStyle}>
-            Ota yhteyttä
-          </h2>
+          <h2 className="section-title"> Ota yhteyttä </h2>
           <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
-          <p className="text-sm tracking-widest uppercase font-light max-w-md mx-auto leading-relaxed" style={textStyle}>
-            Jätä viesti alla tai ota yhteyttä suoraan puhelimitse tai sähköpostilla.
-          </p>
+          <p className="text-style"> Jätä viesti alla tai ota yhteyttä suoraan puhelimitse tai sähköpostilla. </p>
         </div>
 
-        {/* Pääsisältö ilman raskaita laatikoita */}
+        {/* Pääsisältö */}
         <div className="grid md:grid-cols-2 gap-20">
           
-          {/* Viestilomake - Minimalistiset inputit */}
+          {/* Viestilomake */}
           <div className="space-y-8">
             <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Jätä viesti

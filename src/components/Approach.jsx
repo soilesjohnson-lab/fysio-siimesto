@@ -14,12 +14,8 @@ export default function Approach() {
 
         {/* Otsikko */}
         <div className="text-center mb-20 space-y-4">
-          <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-light block">
-            Fysio Siimestö
-          </span>
-          <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight">
-            Kestävää kehollista voimaa ja <br className="hidden md:block" /> syvää mielenrauhaa.
-          </h2>
+          {/* <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-light block"> Fysio Siimestö </span> */}
+          <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight"> Kestävää kehollista voimaa ja <br className="hidden md:block" /> syvää mielenrauhaa. </h2>
         </div>
 
         {/* Nostot */}
@@ -28,17 +24,11 @@ export default function Approach() {
             <div key={index} className="flex flex-col items-center text-center space-y-6">
               <div className="w-px h-12 bg-gray-200"></div> {/* Pystyviiva */}
               
-              <h3 className="text-[11px] tracking-[0.3em] uppercase font-semibold text-[#1a1a1a]">
-                {item.title}
-              </h3>
+              <h3 className="text-[11px] tracking-[0.3em] uppercase font-semibold text-[#1a1a1a]"> {item.title} </h3>
               
               <div className="space-y-2">
-                <p className="text-gray-900 font-medium leading-relaxed">
-                  {item.benefit}
-                </p>
-                <p className="text-gray-500 text-sm leading-relaxed font-light tracking-wide italic">
-                  {item.result}
-                </p>
+                <p className="text-gray-900 font-medium leading-relaxed"> {item.benefit} </p>
+                <p className="text-gray-500 text-sm leading-relaxed font-light tracking-wide italic"> {item.result} </p>
               </div>
             </div>
           ))}

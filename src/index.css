@@ -11,4 +11,15 @@
     @apply text-2xl md:text-3xl uppercase font-light tracking-[0.3em] text-[#1a1a1a];
     font-family: 'Montserrat', sans-serif;
   }
+
+  .title-style {
+    @apply text-xl md:text-3xl uppercase font-light tracking-[0.2em] mb-10 leading-[1.2];
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-style {
+    @apply text-sm tracking-widest uppercase font-light max-w-md mx-auto leading-relaxed;
+    color: #777777;
+    font-family: 'Montserrat', sans-serif;
+  }
 }
