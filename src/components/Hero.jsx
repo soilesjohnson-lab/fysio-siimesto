@@ -18,30 +18,16 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       
       {/* Kuva */}
-      <img 
-        src="/hero.jpg" 
-        alt="Hero" 
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.65]"
-      />
+      <img src="/fysio1.jpg" alt="Hero" className="absolute inset-0 w-full h-full object-cover brightness-[0.65]"/>
     
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
 
         {/* Pääotsikko */}
-        <h1 
-          className="text-4xl md:text-6xl font-bold text-white mb-8" 
-          style={titleStyle}
-        >
-          Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien
-        </h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8" style={titleStyle}> Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien </h1>
 
         {/* Leipäteksti */}
-        <p 
-          className="max-w-2xl mx-auto text-base md:text-xl font-light leading-relaxed mb-12" 
-          style={subTextStyle}
-        >
-          Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
-        </p>
+        <p className="max-w-2xl mx-auto text-base md:text-xl font-light leading-relaxed mb-12" style={subTextStyle}> Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena. </p>
 
         {/* Nappi - Muutettu NavLinkiksi */}
         <div className="flex justify-center">
