@@ -7,6 +7,21 @@
 }
 
 @layer components {
+
+  /* Hero pääotsikko */
+  .hero-title {
+    @apply text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.2] tracking-[0.02em];
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Hero alaotsikko */
+  .hero-subtext {
+    @apply text-base md:text-xl font-light leading-relaxed mb-12 max-w-2xl mx-auto;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.05em;
+    font-family: 'Montserrat', sans-serif;
+  }
+
   .section-title {
     @apply text-2xl md:text-3xl uppercase font-light tracking-[0.3em] text-[#1a1a1a];
     font-family: 'Montserrat', sans-serif;
