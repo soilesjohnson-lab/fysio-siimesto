@@ -7,9 +7,9 @@ export default function About() {
   return (
     <section className="grid grid-cols-1 w-full bg-[#f9f8f6]">
       
-      {/* Taustakuva */}
+      {/* Kuva */}
       <div className="row-start-1 col-start-1 h-[500px] md:h-[650px] w-full overflow-hidden relative">
-        <img src="/soile.jpg" alt="Soile - Fysio Siimestö" className="w-full h-full object-cover object-[center_20%]"/>
+        <img src="/SOILE1.jpg" alt="Soile - Fysio Siimestö" className="w-full h-full object-cover object-[center_20%]"/>
         <div className="absolute inset-0 bg-black/5"></div>
       </div>
 
