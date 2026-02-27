@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { offerings } from "../components/data/Offerings";
 
@@ -36,12 +35,7 @@ export default function Approach() {
 
         {/* CTA-nappi */}
         <div className="mt-20 text-center">
-        <NavLink 
-            to="/services" 
-            className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800">
-            Tutustu palveluihin
-            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span>
-        </NavLink>
+          <NavLink to="/services" className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"> Tutustu palveluihin <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span></NavLink>
         </div>
       </div>
     </section>

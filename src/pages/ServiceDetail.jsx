@@ -1,5 +1,4 @@
-// pages/ServiceDetail.jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { client } from "../sanityClient";
 
@@ -38,7 +37,6 @@ const ServiceDetail = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Full-width hero image */}
       {service.image && (
         <div className="w-full h-[400px] md:h-[500px] relative overflow-hidden">
           <img
@@ -46,26 +44,22 @@ const ServiceDetail = () => {
             alt={service.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20"></div> {/* kevyesti tummentaa tekstiä varten */}
-          <h1 className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-4xl md:text-5xl font-light uppercase text-center px-4">
-            {service.name}
-          </h1>
+          <div className="absolute inset-0 bg-black/20"></div>
+            <h1 className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white md:text-5xl font-light uppercase text-center hero-title"> {service.name} </h1>
         </div>
       )}
 
-      {/* Content area */}
-      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12">
+      {/* Sisältöalue */}
+      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12space-y-6 text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed text-left">
         {service.description && (
-          <p className="text-gray-700 leading-relaxed text-lg" style={textStyle}>
-            {service.description}
-          </p>
+          <p className="text-gray-700 " style={textStyle}> {service.description} </p>
         )}
 
         {service.content && (
             <div className="space-y-6 text-gray-800" style={textStyle}>
                 {service.content.split("\n").map((line, idx) => {
                 const trimmed = line.trim();
-                if (!trimmed) return null; // ohita tyhjät rivit
+                if (!trimmed) return null;
 
                 if (trimmed.startsWith("## ")) {
                     return (
@@ -90,9 +84,7 @@ const ServiceDetail = () => {
 
         {service.options && service.options.length > 0 && (
           <div className="mt-12 space-y-3">
-            <h2 className="text-2xl font-medium mb-4" style={textStyle}>
-              Vaihtoehdot
-            </h2>
+            <h2 className="text-2xl font-medium mb-4" style={textStyle}> Vaihtoehdot </h2>
             <ul className="divide-y divide-gray-200">
               {service.options.map((opt, idx) => (
                 <li key={idx} className="flex justify-between py-3">
@@ -105,25 +97,13 @@ const ServiceDetail = () => {
         )}
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <Link
-            to="/booking"
-            className="inline-block px-10 py-4 bg-gray-800 text-white font-medium uppercase rounded-lg hover:bg-gray-900 transition-colors duration-200"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            Varaa aika
-          </Link>
+        <div className="text-center mt-20">
+          <Link to="/booking" className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"> Varaa aika </Link>
         </div>
 
         {/* Takaisin */}
         <div className="text-center mt-8">
-          <Link
-            to="/services"
-            className="inline-block text-gray-600 text-[10px] tracking-[0.2em] uppercase hover:underline"
-            style={{ fontFamily: "'Montserrat', sans-serif" }}
-          >
-            &larr; Takaisin palveluihin
-          </Link>
+          <Link to="/services" className="inline-block text-gray-600 text-[10px] tracking-[0.2em] uppercase" style={{ fontFamily: "'Montserrat', sans-serif" }}> &larr; Takaisin palveluihin </Link>
         </div>
       </div>
     </div>

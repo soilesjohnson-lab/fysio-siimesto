@@ -26,40 +26,18 @@ export default function Contact() {
           
           {/* Viestilomake */}
           <div className="space-y-8">
-            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              Jätä viesti
-            </h3>
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}> Jätä viesti </h3>
             <form className="space-y-6">
-              <input
-                type="text"
-                placeholder="NIMESI"
-                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              />
-              <input
-                type="email"
-                placeholder="SÄHKÖPOSTI"
-                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              />
-              <textarea
-                placeholder="MITEN VOIMME AUTTAA?"
-                rows="4"
-                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light resize-none"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              ></textarea>
-              
-              <button className="inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4">
-                Lähetä viesti
-              </button>
+              <input type="text" placeholder="NIMESI" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}/>
+              <input type="email" placeholder="SÄHKÖPOSTI" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}/>
+              <textarea placeholder="MITEN VOIMME AUTTAA?" rows="4" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light resize-none" style={{ fontFamily: "'Montserrat', sans-serif" }}></textarea>
+              <button className="inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4"> Lähetä viesti </button>
             </form>
           </div>
 
           {/* Sijainti ja yhteystiedot */}
           <div className="space-y-8">
-            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-              Vastaanotto
-            </h3>
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}> Vastaanotto </h3>
             
             {/* Sijainti */}
             <div className="relative w-full pb-[60%] overflow-hidden rounded-sm grayscale-[0.5] hover:grayscale-0 transition-all duration-500">

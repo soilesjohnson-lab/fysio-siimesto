@@ -1,8 +1,7 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Hero() {
-  
+
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       
@@ -18,7 +17,7 @@ export default function Hero() {
         {/* Alaotsikko */}
         <p className="hero-subtext"> Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena. </p>
 
-        {/* Nappi - Muutettu NavLinkiksi */}
+        {/* Nappi */}
         <div className="flex justify-center">
           <NavLink 
             to="/booking" 

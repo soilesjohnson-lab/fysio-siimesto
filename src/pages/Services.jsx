@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { client } from '../sanityClient';
 import ServiceCard from '../components/ServiceCard';
+import scrollToTop from "../hooks/scrollToTop";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -37,10 +38,7 @@ const Services = () => {
     color: '#1a1a1a'
   };
 
-  // Scrollaa sivun alkuun kun sivulle kirjaudutaan
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  scrollToTop();
 
   return (
     <div className="bg-white min-h-screen py-24 px-6 md:px-12">
