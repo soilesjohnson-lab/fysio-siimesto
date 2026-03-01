@@ -12,12 +12,14 @@ const ServiceCard = ({ title, description, image, options, id }) => {
       
       {/* Kuva */}
       {image && (
-        <div className="h-56 w-full flex-shrink-0">
+        <div className="h-56 w-full flex-shrink-0 relative">
           <img 
             src={image} 
             alt={title} 
             className="w-full h-full object-cover"
           />
+          {/* Hillitty väripesu overlay */}
+          <div className="absolute inset-0 bg-gray-100/8 pointer-events-none"></div>
         </div>
       )}
 

@@ -9,16 +9,14 @@ export default function About() {
       
       {/* Kuva */}
       <div className="row-start-1 col-start-1 h-[500px] md:h-[650px] w-full overflow-hidden relative">
-        <img src="/SOILE1.jpg" alt="Soile - Fysio Siimestö" className="w-full h-full object-cover object-[center_20%]"/>
-        <div className="absolute inset-0 bg-black/5"></div>
+        <img src="/soile.jpg" alt="Soile - Fysio Siimestö" className="w-full h-full object-cover object-[center_50%]"/>
+        <div className="absolute inset-0 bg-black/1"></div>
       </div>
 
       {/* Sisältöalue */}
       <div className="row-start-1 col-start-1 flex flex-col items-center pt-[350px] md:pt-[450px] px-6 pb-24">
         
         <div className="w-full max-w-3xl bg-white p-10 md:p-20 shadow-xl text-center z-10">
-          
-          {/* <span className="block text-[10px] tracking-[0.4em] uppercase text-gray-400 font-light mb-6"> Fysioterapeutti & Omistaja </span> */}
 
           {/* Otsikko */}
           <h2 className="title-style"> Lämmin kohtaaminen, <br /> yksilöllinen hoito </h2>

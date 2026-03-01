@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     /* Puhdas valkoinen tausta, hyvin ohut ja huomaamaton alareuna */
-    <nav className="bg-white border-b border-gray-50 sticky top-0 z-50">
+    <nav className="bg-white border-b border-gray-50 sticky top-0 z-50 shadow-[0_11px_16px_-4px_rgba(0,0,0,0.1)]">
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex items-center justify-between h-24">
 
