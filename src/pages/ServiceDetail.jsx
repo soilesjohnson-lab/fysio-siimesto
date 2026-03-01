@@ -51,10 +51,6 @@ const ServiceDetail = () => {
 
       {/* Sisältöalue */}
       <div className="max-w-3xl mx-auto py-16 px-6 space-y-12 text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed text-left">
-        {service.description && (
-          <p className="text-gray-700 " style={textStyle}> {service.description} </p>
-        )}
-
         {service.content && (
             <div className="space-y-6 text-gray-800" style={textStyle}>
                 {service.content.split("\n").map((line, idx) => {
