@@ -50,7 +50,7 @@ const ServiceDetail = () => {
       )}
 
       {/* Sisältöalue */}
-      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12space-y-6 text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed text-left">
+      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12 text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed text-left">
         {service.description && (
           <p className="text-gray-700 " style={textStyle}> {service.description} </p>
         )}
