@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
   };
 
   return (
-    /* Puhdas valkoinen tausta, hyvin ohut ja huomaamaton alareuna */
+    /* Tausta */
     <nav className="bg-white border-b border-gray-50 sticky top-0 z-50 shadow-[0_11px_16px_-4px_rgba(0,0,0,0.1)]">
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex items-center justify-between h-24">
@@ -34,7 +34,7 @@ export default function Navbar() {
             </NavLink>
           </div>
 
-          {/* Desktop linkit - Lisää ilmaa ja poistettu taustavärit */}
+          {/* Linkit */}
           <div className="hidden md:flex items-center space-x-12">
             {links.map((link) => (
               <NavLink
@@ -49,13 +49,13 @@ export default function Navbar() {
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
                 {link.label}
-                {/* Hienovarainen alleviivaus-efekti hoverissa/aktiivisena */}
+                {/* Alleviivaus-hover */}
                 <span className={`absolute -bottom-1 left-0 w-0 h-[1px] bg-gray-800 transition-all duration-300 group-hover:w-full`}></span>
               </NavLink>
             ))}
           </div>
 
-          {/* Burger menu mobiilissa - Ohuilla viivoilla */}
+          {/* Burger menu */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
@@ -69,7 +69,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobiili menu - Minimalistinen listaus */}
+      {/* Mobiili menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-50 px-10 py-10 animate-fadeIn">
           <div className="flex flex-col space-y-8">
