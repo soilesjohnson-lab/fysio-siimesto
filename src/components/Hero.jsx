@@ -6,7 +6,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       
       {/* Kuva */}
-      <img src="/hero.jpg" alt="Hero" className="absolute inset-0 w-full h-full object-cover brightness-[0.85]"/>
+      <img
+        src="/hero.jpg"
+        alt="Hero"
+        className="absolute inset-0 w-full h-full object-cover brightness-[0.85]"
+      />
     
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
