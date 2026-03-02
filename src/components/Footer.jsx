@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
@@ -15,16 +13,14 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#3a3a3a] pt-10 pb-0 text-center">
+    <footer className="bg-[#3a3a3a] pt-10 pb-6 text-center">
       <div className="max-w-7xl mx-auto px-10">
-        
+
         {/* Pääosio */}
         <div className="flex flex-col items-center">
-          <h3 className="text-xs tracking-[0.5em] uppercase font-light text-white mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-            Fysio Siimestö
-          </h3>
-          
-          <div className="flex space-x-12 mb-16">
+
+
+          <div className="flex space-x-12 mb-8">
             <a href="#" className="hover:opacity-40 transition-all duration-300">
               <svg width="16" height="16" viewBox="0 0 24 24" {...iconStyle}>
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -45,20 +41,18 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-        </div>
 
-        {/* Alapalkki */}
-        {/* <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[9px] tracking-[0.25em] uppercase font-light opacity-50" style={textStyle}>
-          <div className="mb-4 md:mb-0">
+          <h3 className="text-xs tracking-[0.5em] uppercase font-light text-white mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+            Fysio Siimestö
+          </h3>
+
+          {/* Copyright */}
+          <div className="text-[10px] mb-4" style={textStyle}>
             © {new Date().getFullYear()} Fysio Siimestö
           </div>
-          
-          <div className="flex space-x-10 italic">
-            <a href="/tietosuoja" className="hover:text-white transition-colors duration-300">
-              Tietosuojaseloste
-            </a>
-          </div>
-        </div> */}
+
+        </div>
+
       </div>
     </footer>
   );
