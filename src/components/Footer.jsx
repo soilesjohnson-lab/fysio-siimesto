@@ -42,9 +42,9 @@ export default function Footer() {
             </a>
           </div>
 
-          <h3 className="text-xs tracking-[0.5em] uppercase font-light text-white mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          {/* <h3 className="text-xs tracking-[0.5em] uppercase font-light text-white mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             Fysio Siimestö
-          </h3>
+          </h3> */}
 
           {/* Copyright */}
           <div className="text-[10px] mb-4" style={textStyle}>

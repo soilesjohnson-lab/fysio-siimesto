@@ -21,7 +21,7 @@ export default function Navbar() {
     /* Tausta */
     <nav className="bg-white border-b border-gray-50 sticky top-0 z-50 shadow-[0_11px_16px_-4px_rgba(0,0,0,0.1)]">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-34">
 
           {/* Logo */}
           <div className="flex-shrink-0">
