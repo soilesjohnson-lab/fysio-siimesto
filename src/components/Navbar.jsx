@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
 
           {/* Burger menu */}
-          <div className="md:hidden flex items-center bg-yellow-300">
+          <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
               className="text-gray-500 focus:outline-none"
@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobiili menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-50 px-10 py-10 animate-fadeIn bg-green-300">
+        <div className="md:hidden bg-white border-t border-gray-50 px-10 py-10 animate-fadeIn">
           <div className="flex flex-col space-y-8">
             {links.map((link) => (
               <NavLink
