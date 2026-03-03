@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white font-raleway text-gray-900 isolate">
+      <div className="min-h-screen flex flex-col bg-white font-raleway text-gray-900">
         <Navbar />
 
         <main className="flex-grow">

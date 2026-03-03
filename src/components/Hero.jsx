@@ -9,7 +9,7 @@ export default function Hero() {
       <img
         src="/hero.jpg"
         alt="Hero"
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.85]"
+        className="absolute inset-0 w-full h-full object-cover brightness-[0.75] pointer-events-none"
       />
     
       {/* Tekstisisältö */}

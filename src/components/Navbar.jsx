@@ -21,7 +21,7 @@ export default function Navbar() {
     /* Tausta */
     <nav className="bg-white border-b border-gray-50 sticky top-0 z-50 shadow-[0_11px_16px_-4px_rgba(0,0,0,0.1)]">
       <div className="max-w-7xl mx-auto px-10">
-        <div className="flex items-center justify-between h-34">
+        <div className="flex items-center justify-between h-26">
 
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
 
           {/* Burger menu */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center bg-yellow-300">
             <button
               onClick={toggleMenu}
               className="text-gray-500 focus:outline-none"
@@ -71,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobiili menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-50 px-10 py-10 animate-fadeIn">
+        <div className="md:hidden bg-white border-t border-gray-50 px-10 py-10 animate-fadeIn bg-green-300">
           <div className="flex flex-col space-y-8">
             {links.map((link) => (
               <NavLink
