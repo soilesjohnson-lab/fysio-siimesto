@@ -99,7 +99,7 @@ export default function Contact() {
                       onClick={() => setZoomedImage("/signs.jpg")}
                     />
                     {/* Overlay ikoni vain kuvan päällä */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 pointer-events: none">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-8 h-8 text-white"
@@ -129,7 +129,7 @@ export default function Contact() {
                         onClick={() => setZoomedImage("/door.jpg")}
                       />
                       {/* Overlay ikoni vain kuvan päällä */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 pointer-events: none">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="w-8 h-8 text-white"
