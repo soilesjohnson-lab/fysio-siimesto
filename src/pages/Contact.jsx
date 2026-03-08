@@ -19,7 +19,7 @@ export default function Contact() {
           <h2 className="section-title">Ota yhteyttä</h2>
           <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
           <p className="text-style">
-            Jätä viesti alla tai ota yhteyttä suoraan puhelimitse tai sähköpostilla.
+            Täytä lomake ottaaksesi yhteyttä tai tutustu ohjeisiin vastaanotolle.
           </p>
         </div>
 
@@ -87,19 +87,27 @@ export default function Contact() {
               <p style={textStyle}>
                 Toimipiste on samassa rakennuksessa kuin <strong>Sohvin valinta</strong>, mutta toisella puolella.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
-
                 {/* Kuva 1 */}
-                <figure className="relative w-full sm:w-1/2 cursor-pointer">
+                <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm">
                   <img
                     src="/signs.jpg"
                     alt="Käännös tieltä"
-                    className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
+                    className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 hover:scale-105"
                     onClick={() => setZoomedImage("/signs.jpg")}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition-opacity rounded-sm">
-                    <span className="text-white text-3xl font-bold select-none">+</span>
+                  {/* Overlay ikoni */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+                    </svg>
                   </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Käännös tieltä
@@ -107,21 +115,30 @@ export default function Contact() {
                 </figure>
 
                 {/* Kuva 2 */}
-                <figure className="relative w-full sm:w-1/2 cursor-pointer">
+                <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm">
                   <img
                     src="/door.jpg"
                     alt="Oven sijainti"
-                    className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
+                    className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 hover:scale-105"
                     onClick={() => setZoomedImage("/door.jpg")}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition-opacity rounded-sm">
-                    <span className="text-white text-3xl font-bold select-none">+</span>
+                  {/* Overlay ikoni */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+                    </svg>
                   </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Sisäänkäynti
                   </figcaption>
                 </figure>
-
               </div>
             </div>
 
