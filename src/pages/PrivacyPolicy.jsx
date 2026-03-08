@@ -1,36 +1,91 @@
-// src/pages/PrivacyPolicy.jsx
+import scrollToTop from "../hooks/scrollToTop";
+
 export default function PrivacyPolicy() {
+  scrollToTop();
+
+  // Etusivun tyyliä mukaileva leipäteksti
+  const bodyTextStyle = "text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed";
+  
+  // Montserrat-tyylit otsikoille ja detaljeille
+  const montserratStyle = { fontFamily: "'Montserrat', sans-serif" };
+
   return (
-    <div className="max-w-4xl mx-auto py-24 px-6 md:px-12 bg-white text-gray-900">
-      <h1 className="text-3xl font-bold mb-6">Tietosuojaseloste</h1>
+    <div className="bg-white min-h-screen py-24 px-6">
+      <div className="max-w-4xl mx-auto">
+        
+        {/* Otsikko - Montserrat */}
+        <div className="mb-20 text-center border-gray-50 pb-6">
+          <h1 className="section-title">Tietosuoja ja evästeet</h1>
+          <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-gray-400 font-medium" style={montserratStyle}>
+            Päivitetty: 8.3.2026
+          </p>
+        </div>
 
-      <p className="mb-4">
-        Tämä sivusto käsittelee henkilötietoja vain tarpeen mukaan. Alla kerrotaan, miten tietoja kerätään ja käytetään.
-      </p>
+        {/* Johdanto - Etusivun tyyli */}
+        <div className="mb-20 w-fit mx-auto max-w-3xl">
+          <p className={bodyTextStyle}>
+            Tämä sivusto on teknisesti staattinen, emmekä kerää tai tallenna henkilötietojasi suoraan sivuston kautta. 
+            Käytämme kuitenkin kolmannen osapuolen palveluita mahdollistaaksemme yhteydenoton ja ajanvarauksen.
+          </p>
+        </div>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">1. Yhteydenottolomake</h2>
-      <p className="mb-4">
-        Lomakkeella kerätään nimi, sähköposti ja viesti, jotta voimme vastata kyselyihisi tai varauksesi yhteydessä. Tietoja ei luovuteta kolmansille osapuolille, ja niitä säilytetään vain tarpeen mukaan.
-      </p>
+        <div className="space-y-20">
+          {/* Sektio 1 */}
+          <section className="max-w-3xl mx-auto">
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
+              1. Yhteydenottolomake (Formspree)
+            </h3>
+            <p className={`${bodyTextStyle} mb-6`}>
+              Kun lähetät viestin yhteydenottolomakkeella, antamasi tiedot (nimi, sähköposti, viesti) välitetään <strong>Formspree.io</strong>-palvelun kautta sähköpostiimme. 
+              Tietoja käytetään vain viestiisi vastaamiseen. Tiedot eivät tallennu tämän sivuston palvelimelle.
+            </p>
+            <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noreferrer" 
+               className="text-[10px] tracking-[0.2em] uppercase underline underline-offset-5 text-gray-400 hover:text-gray-800 transition-colors" style={montserratStyle}>
+              Lue lisää: Formspree Privacy Policy
+            </a>
+          </section>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">2. Timma-ajanvaraus</h2>
-      <p className="mb-4">
-        Varauslomake upotetaan Timma-palvelusta (https://varaa.timma.fi). Timma voi asettaa evästeitä ja kerätä tietoja ajanvarauksesi mahdollistamiseksi. Lue lisää Timman tietosuojaselosteesta <a href="https://www.timma.fi/privacy" target="_blank" className="text-blue-600 underline">täältä</a>.
-      </p>
+          {/* Sektio 2 */}
+          <section className="max-w-3xl mx-auto">
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
+              2. Ajanvaraus (Timma)
+            </h3>
+            <p className={`${bodyTextStyle} mb-6`}>
+              Ajanvaraussivu käyttää upotettua <strong>Timma-palvelua</strong>. Kun varaat ajan, annat tietosi suoraan Timman järjestelmään. 
+              Me pääsemme näkemään nämä tiedot Timman hallintapaneelin kautta voidaksemme toteuttaa tilatun palvelun.
+            </p>
+            <a href="https://www.timma.fi/privacy" target="_blank" rel="noreferrer" 
+               className="text-[10px] tracking-[0.2em] uppercase underline underline-offset-5 text-gray-400 hover:text-gray-800 transition-colors" style={montserratStyle}>
+              Lue lisää: Timma Privacy Policy
+            </a>
+          </section>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">3. Google reCAPTCHA</h2>
-      <p className="mb-4">
-        Sivulla käytetään Google reCAPTCHA-palvelua roskapostin estoon. reCAPTCHA voi kerätä tietoja käyttäjän selaimesta. Googlen tietosuojaseloste ja käyttöehdot ovat voimassa: <a href="https://policies.google.com/privacy" target="_blank" className="text-blue-600 underline">Tietosuojaseloste</a>.
-      </p>
+          {/* Sektio 3 */}
+          <section className="max-w-3xl mx-auto">
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
+              3. Karttapalvelu (Google Maps)
+            </h3>
+            <p className={`${bodyTextStyle} mb-6`}>
+              Sivustolla on upotettu Google Maps -kartta sijaintimme näyttämiseksi. Google saattaa kerätä tietoja, kuten IP-osoitteesi tai sijaintisi, jos selaimesi lataa karttaelementin.
+            </p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" 
+               className="text-[10px] tracking-[0.2em] uppercase underline underline-offset-5 text-gray-400 hover:text-gray-800 transition-colors" style={montserratStyle}>
+              Lue lisää: Google Privacy Policy
+            </a>
+          </section>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">4. Evästeet</h2>
-      <p className="mb-4">
-        Sivustolla ei käytetä muita evästeitä tällä hetkellä. Kolmannen osapuolen palvelut (Timma ja reCAPTCHA) voivat asettaa evästeitä. 
-      </p>
-
-      <p className="mt-6">
-        Päivitetty: 8.3.2026
-      </p>
+          {/* Sektio 4 */}
+          <section className="max-w-3xl mx-auto pb-20">
+            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
+              4. Evästeet
+            </h3>
+            <p className={bodyTextStyle}>
+              Sivusto ei aseta markkinointi- tai seurantaevästeitä. Kolmannen osapuolen upotukset, kuten Timma tai Google Maps saattavat kuitenkin asettaa teknisiä evästeitä, jotka ovat välttämättömiä kyseisten palveluiden toiminnalle.
+            </p>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

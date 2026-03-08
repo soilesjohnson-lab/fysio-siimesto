@@ -42,7 +42,7 @@ export default function About() {
 
           {/* Nappi */}
           <div className="pt-10">
-            <button onClick={() => setExpanded(!expanded)} className="inline-block pb-1 border-b border-gray-900 text-[11px] tracking-[0.3em] uppercase font-medium hover:opacity-50 transition-opacity"> {expanded ? "Sulje" : "Lue koko tarinani"} </button>
+            <button onClick={() => setExpanded(!expanded)} className=" cursor-pointer inline-block pb-1 border-b border-gray-900 text-[11px] tracking-[0.3em] uppercase font-medium hover:opacity-50 transition-opacity"> {expanded ? "Sulje" : "Lue koko tarinani"} </button>
           </div>
         </div>
       </div>

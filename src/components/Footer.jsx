@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           {/* Oikea kolumni: tietosuojaseloste-linkki */}
-          <div className="w-full md:w-1/3 flex justify-center md:justify-end mt-2 md:mt-12 items-center">
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end mt-2 md:mt-6 items-center">
             <a
               href="/privacy-policy"
               className="text-[11px] hover:underline"
