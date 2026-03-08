@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from "react";
 import scrollToTop from "../hooks/scrollToTop";
 
 export default function Contact() {
+  const [zoomedImage, setZoomedImage] = useState(null);
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
     color: "#777777",
@@ -10,36 +11,65 @@ export default function Contact() {
   scrollToTop();
 
   return (
-    /* Tausta pidetään puhtaana valkoisena */
     <div className="bg-white min-h-screen py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Otsikko */}
         <div className="mb-20 text-center">
-          <h2 className="section-title"> Ota yhteyttä </h2>
+          <h2 className="section-title">Ota yhteyttä</h2>
           <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
-          <p className="text-style"> Jätä viesti alla tai ota yhteyttä suoraan puhelimitse tai sähköpostilla. </p>
+          <p className="text-style">
+            Jätä viesti alla tai ota yhteyttä suoraan puhelimitse tai sähköpostilla.
+          </p>
         </div>
 
         {/* Pääsisältö */}
         <div className="grid md:grid-cols-2 gap-20">
-          
+
           {/* Viestilomake */}
           <div className="space-y-8">
-            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}> Jätä viesti </h3>
+            <h3
+              className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Jätä viesti
+            </h3>
             <form className="space-y-6">
-              <input type="text" placeholder="NIMESI" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}/>
-              <input type="email" placeholder="SÄHKÖPOSTI" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}/>
-              <textarea placeholder="MITEN VOIMME AUTTAA?" rows="4" className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light resize-none" style={{ fontFamily: "'Montserrat', sans-serif" }}></textarea>
-              <button className="inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4"> Lähetä viesti </button>
+              <input
+                type="text"
+                placeholder="NIMESI"
+                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              />
+              <input
+                type="email"
+                placeholder="SÄHKÖPOSTI"
+                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              />
+              <textarea
+                placeholder="MITEN VOIMME AUTTAA?"
+                rows="4"
+                className="w-full pb-3 bg-transparent border-b border-gray-200 text-[11px] tracking-widest outline-none focus:border-gray-500 transition-colors uppercase font-light resize-none"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              ></textarea>
+              <button className="inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4">
+                Lähetä viesti
+              </button>
             </form>
           </div>
 
-          {/* Sijainti ja yhteystiedot */}
+          {/* Vastaanotto ja ohjeet */}
           <div className="space-y-8">
-            <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}> Vastaanotto </h3>
-            
-            {/* Sijainti */}
+
+            <h3
+              className="text-xs tracking-[0.3em] uppercase font-semibold mb-10 text-gray-800"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Vastaanotto
+            </h3>
+
+            {/* Kartta */}
             <div className="relative w-full pb-[60%] overflow-hidden rounded-sm grayscale-[0.5] hover:grayscale-0 transition-all duration-500">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.2894790911687!2d29.773324193769117!3d62.611034912366016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469b865fbf57aab5%3A0x870eaefd3ea08ba2!2sTeollisuuskatu%2011%2C%2080100%20Joensuu!5e1!3m2!1sfi!2sfi!4v1770414935106!5m2!1sfi!2sfi"
@@ -52,19 +82,53 @@ export default function Contact() {
               />
             </div>
 
-            {/* Yhteystiedot */}
-            <div className="pt-6 space-y-4">
-              <div className="text-[11px] tracking-[0.2em] uppercase font-light leading-relaxed" style={textStyle}>
-                <p className="text-gray-900 font-medium mb-1">Fysio Siimestö</p>
-                <p>Teollisuuskatu 11, 80100 Joensuu</p>
-                <div className="h-[1px] w-8 bg-gray-100 my-4"></div>
-                <p>Puh: 040 123 4567</p>
-                <p>Email: info@fysiosiimesto.fi</p>
+            {/* Tekstiohje ja kuvat */}
+            <div className="bg-gray-50 border border-gray-200 rounded-md p-6 text-[11px] tracking-[0.2em] font-light space-y-4">
+              <p style={textStyle}>
+                Toimipiste on samassa rakennuksessa kuin <strong>Sohvin valinta</strong>, mutta toisella puolella.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                <figure className="w-full sm:w-1/2 cursor-pointer">
+                  <img
+                    src="./public/signs.jpg"
+                    alt="Käännös tieltä"
+                    className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
+                    onClick={() => setZoomedImage("./public/signs.jpg")}
+                  />
+                  <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
+                    Käännös tieltä
+                  </figcaption>
+                </figure>
+
+                <figure className="w-full sm:w-1/2 cursor-pointer">
+                  <img
+                    src="./public/door.jpg"
+                    alt="Oven sijainti"
+                    className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
+                    onClick={() => setZoomedImage("./public/door.jpg")}
+                  />
+                  <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
+                    Sisäänkäynti
+                  </figcaption>
+                </figure>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
+
+      {/* Lightbox modal */}
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 cursor-zoom-out"
+          onClick={() => setZoomedImage(null)}
+        >
+          <img src={zoomedImage} alt="Zoomed" className="max-h-[90%] max-w-[90%] rounded-md shadow-lg" />
+        </div>
+      )}
     </div>
   );
 }
