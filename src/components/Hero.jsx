@@ -14,11 +14,6 @@ export default function Hero() {
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
 
-        {/* Pehmeä tumma häivytys tekstin alla */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-full max-w-4xl h-114 bg-gradient-to-b from-black/38 via-black/38 to-black/38 rounded-3xl blur-3xl"></div>
-        </div>
-
         {/* Pääotsikko */}
         <h1 className="hero-title relative text-white">
           Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien
