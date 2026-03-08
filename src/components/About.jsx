@@ -10,7 +10,7 @@ export default function About() {
       {/* Kuva */}
       <div className="row-start-1 col-start-1 h-[500px] md:h-[650px] w-full overflow-hidden relative">
         <img
-          src="/soile6.jpg"
+          src="/soile4.jpg"
           alt="Soile - Fysio Siimestö"
           className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
           style={{ objectPosition: "left 20%" }}

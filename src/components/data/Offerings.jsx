@@ -10,8 +10,8 @@ export const offerings = [
     result: "jotta kehosi voi rauhoittua ja jaksamisesi lisääntyä.",
   },
   {
-    title: "Rentouttavat Hoidot",
-    benefit: "Rentouttavat hoidot ja Personal trainer-palvelut",
+    title: "Rentouttavat Hoidot / Hieronta",
+    benefit: "Rentouttavat hoidot / hieronta sekä Personal trainer -palvelut",
     result: "Rentouttavia hoitoja palautumisen tueksi sekä kehoa kuuntelevaa valmennusta.",
   }
 ];
