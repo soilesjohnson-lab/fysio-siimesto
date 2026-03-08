@@ -68,8 +68,16 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Oikea kolumni: tällä hetkellä tyhjä tasapainolle */}
-          <div className="md:w-1/3 hidden md:block"></div>
+          {/* Oikea kolumni: tietosuojaseloste-linkki */}
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end mt-2 md:mt-12 items-center">
+            <a
+              href="/privacy-policy"
+              className="text-[11px] hover:underline"
+              style={textStyle}
+            >
+              Tietosuojaseloste
+            </a>
+          </div>
         </div>
       </div>
     </footer>
