@@ -89,17 +89,43 @@ export default function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 {/* Kuva 1 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer">
-                  {/* Kuva + overlay wrapper */}
-                  <div className="relative overflow-hidden rounded-sm">
+                <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm group">
+                  {/* Klikattava kuva */}
+                  <img
+                    src="/signs.jpg"
+                    alt="Käännös tieltä"
+                    className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                    onClick={() => setZoomedImage("/signs.jpg")}
+                  />
+
+                  {/* Hover overlay: EI ota vastaan hiiritapahtumia */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 pointer-events-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
+                    </svg>
+                  </div>
+
+                  <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
+                    Käännös tieltä
+                  </figcaption>
+                </figure>
+
+                {/* Kuva 2 */}
+                  <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm group">
                     <img
-                      src="/signs.jpg"
-                      alt="Käännös tieltä"
-                      className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 hover:scale-105"
-                      onClick={() => setZoomedImage("/signs.jpg")}
+                      src="/door.jpg"
+                      alt="Oven sijainti"
+                      className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                      onClick={() => setZoomedImage("/door.jpg")}
                     />
-                    {/* Overlay ikoni vain kuvan päällä */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 pointer-events: none">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 pointer-events-none">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-8 h-8 text-white"
@@ -111,38 +137,6 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
                       </svg>
                     </div>
-                  </div>
-
-                  <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
-                    Käännös tieltä
-                  </figcaption>
-                </figure>
-
-                {/* Kuva 2 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer">
-                    {/* Kuva + overlay wrapper */}
-                    <div className="relative overflow-hidden rounded-sm">
-                      <img
-                        src="/door.jpg"
-                        alt="Oven sijainti"
-                        className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 hover:scale-105"
-                        onClick={() => setZoomedImage("/door.jpg")}
-                      />
-                      {/* Overlay ikoni vain kuvan päällä */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/20 pointer-events: none">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="w-8 h-8 text-white"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
-                        </svg>
-                      </div>
-                    </div>
-
                     <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                       Sisäänkäynti
                     </figcaption>
