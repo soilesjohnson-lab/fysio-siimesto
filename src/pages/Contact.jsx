@@ -91,7 +91,7 @@ export default function Contact() {
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 <figure className="w-full sm:w-1/2 cursor-pointer">
                   <img
-                    src="./public/signs.jpg"
+                    src="/signs.jpg"
                     alt="Käännös tieltä"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
                     onClick={() => setZoomedImage("./public/signs.jpg")}
@@ -103,7 +103,7 @@ export default function Contact() {
 
                 <figure className="w-full sm:w-1/2 cursor-pointer">
                   <img
-                    src="./public/door.jpg"
+                    src="/door.jpg"
                     alt="Oven sijainti"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
                     onClick={() => setZoomedImage("./public/door.jpg")}
