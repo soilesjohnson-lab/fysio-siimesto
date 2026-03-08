@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="text-center md:text-left md:w-1/3">
             <p className="text-[11px] font-medium mb-1" style={textStyle}>Fysio Siimestö</p>
             <p className="text-[11px]" style={textStyle}>Teollisuuskatu 11, 80100 Joensuu</p>
-            <p className="text-[11px]" style={textStyle}>+358 40 123 4567</p>
+            <p className="text-[11px]" style={textStyle}>++358 50 404 3090</p>
             <p className="text-[11px]" style={textStyle}>info@fysiosiimesto.fi</p>
           </div>
 
