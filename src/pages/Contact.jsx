@@ -87,60 +87,72 @@ export default function Contact() {
               <p style={textStyle}>
                 Toimipiste on samassa rakennuksessa kuin <strong>Sohvin valinta</strong>, mutta toisella puolella.
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 {/* Kuva 1 */}
-                <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm group">
-                  {/* Klikattava kuva */}
-                  <img
-                    src="/signs.jpg"
-                    alt="Käännös tieltä"
-                    className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                <figure className="w-full sm:w-1/2 cursor-pointer">
+                  <div 
+                    className="relative rounded-sm overflow-hidden group" // <- group hover
                     onClick={() => setZoomedImage("/signs.jpg")}
-                  />
-
-                  {/* Hover overlay: EI ota vastaan hiiritapahtumia */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 pointer-events-none">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
-                    </svg>
+                  >
+                    <img
+                      src="/signs.jpg"
+                      alt="Käännös tieltä"
+                      className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                    />
+                    {/* Overlay ikoni */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                      <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Käännös tieltä
                   </figcaption>
                 </figure>
 
                 {/* Kuva 2 */}
-                  <figure className="relative w-full sm:w-1/2 cursor-pointer overflow-hidden rounded-sm group">
+                <figure className="w-full sm:w-1/2 cursor-pointer">
+                  <div 
+                    className="relative rounded-sm overflow-hidden group" // <- group hover
+                    onClick={() => setZoomedImage("/door.jpg")}
+                  >
                     <img
                       src="/door.jpg"
                       alt="Oven sijainti"
                       className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
-                      onClick={() => setZoomedImage("/door.jpg")}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 pointer-events-none">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
-                      </svg>
+                    {/* Overlay ikoni */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                      <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m-7-7h14" />
+                        </svg>
+                      </div>
                     </div>
-                    <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
-                      Sisäänkäynti
-                    </figcaption>
-                  </figure>
+                  </div>
+                  <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
+                    Sisäänkäynti
+                  </figcaption>
+                </figure>
+
               </div>
             </div>
 
