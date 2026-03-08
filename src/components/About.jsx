@@ -9,8 +9,12 @@ export default function About() {
       
       {/* Kuva */}
       <div className="row-start-1 col-start-1 h-[500px] md:h-[650px] w-full overflow-hidden relative">
-        <img src="/soile.jpg" alt="Soile - Fysio Siimestö" className="w-full h-full object-cover object-[center_50%]"/>
-        <div className="absolute inset-0 bg-black/1"></div>
+        <img
+          src="/soile6.jpg"
+          alt="Soile - Fysio Siimestö"
+          className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
+          style={{ objectPosition: "left 20%" }}
+        />
       </div>
 
       {/* Sisältöalue */}

@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
 export default function Hero() {
-
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       
@@ -9,20 +8,29 @@ export default function Hero() {
       <img
         src="/hero.jpg"
         alt="Hero"
-        className="absolute inset-0 w-full h-full object-cover brightness-[0.75] pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover brightness-[0.9] pointer-events-none"
       />
-    
+
       {/* Tekstisisältö */}
       <div className="relative z-10 max-w-4xl px-8">
 
+        {/* Pehmeä tumma häivytys tekstin alla */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-full max-w-4xl h-114 bg-gradient-to-b from-black/38 via-black/38 to-black/38 rounded-3xl blur-3xl"></div>
+        </div>
+
         {/* Pääotsikko */}
-        <h1 className="hero-title"> Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien </h1>
+        <h1 className="hero-title relative text-white">
+          Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien
+        </h1>
 
         {/* Alaotsikko */}
-        <p className="hero-subtext"> Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena. </p>
+        <p className="hero-subtext relative text-white/90">
+          Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
+        </p>
 
         {/* Nappi */}
-        <div className="flex justify-center">
+        <div className="flex justify-center relative mt-6">
           <NavLink 
             to="/booking" 
             className="px-12 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white text-[10px] tracking-[0.3em] uppercase font-medium hover:bg-white hover:text-gray-900 transition-all duration-500 rounded-sm"

@@ -6,7 +6,8 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
-
+import CookieBanner from "./components/CookieBanner";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
             <Route path="/services/:id" element={<ServiceDetail />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
 
         <Footer />
+        <CookieBanner />
       </div>
     </Router>
   );
