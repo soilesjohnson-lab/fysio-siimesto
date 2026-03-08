@@ -89,29 +89,39 @@ export default function Contact() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                <figure className="w-full sm:w-1/2 cursor-pointer">
+
+                {/* Kuva 1 */}
+                <figure className="relative w-full sm:w-1/2 cursor-pointer">
                   <img
                     src="/signs.jpg"
                     alt="Käännös tieltä"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
                     onClick={() => setZoomedImage("/signs.jpg")}
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition-opacity rounded-sm">
+                    <span className="text-white text-3xl font-bold select-none">+</span>
+                  </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Käännös tieltä
                   </figcaption>
                 </figure>
 
-                <figure className="w-full sm:w-1/2 cursor-pointer">
+                {/* Kuva 2 */}
+                <figure className="relative w-full sm:w-1/2 cursor-pointer">
                   <img
                     src="/door.jpg"
                     alt="Oven sijainti"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
                     onClick={() => setZoomedImage("/door.jpg")}
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 opacity-0 hover:opacity-100 transition-opacity rounded-sm">
+                    <span className="text-white text-3xl font-bold select-none">+</span>
+                  </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Sisäänkäynti
                   </figcaption>
                 </figure>
+
               </div>
             </div>
 
