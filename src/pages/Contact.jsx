@@ -94,7 +94,7 @@ export default function Contact() {
                     src="/signs.jpg"
                     alt="Käännös tieltä"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
-                    onClick={() => setZoomedImage("./public/signs.jpg")}
+                    onClick={() => setZoomedImage("/signs.jpg")}
                   />
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Käännös tieltä
@@ -106,7 +106,7 @@ export default function Contact() {
                     src="/door.jpg"
                     alt="Oven sijainti"
                     className="w-full rounded-sm shadow-sm object-cover aspect-[4/3]"
-                    onClick={() => setZoomedImage("./public/door.jpg")}
+                    onClick={() => setZoomedImage("/door.jpg")}
                   />
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
                     Sisäänkäynti
