@@ -82,6 +82,13 @@ export default function Contact() {
               />
             </div>
 
+            <h3
+              className="text-xs tracking-[0.3em] uppercase font-semibold mt-20 text-gray-800"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Saapumisohjeet
+            </h3>
+
             {/* Tekstiohje ja kuvat */}
             <div className="bg-gray-50 border border-gray-200 rounded-md p-6 text-[11px] tracking-[0.2em] font-light space-y-4">
               <p style={textStyle}>
