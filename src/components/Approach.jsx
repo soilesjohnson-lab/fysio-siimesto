@@ -14,7 +14,7 @@ export default function Approach() {
         {/* Otsikko */}
         <div className="text-center mb-20 space-y-4">
           {/* <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-light block"> Fysio Siimestö </span> */}
-          <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight"> Kestävää kehollista voimaa ja <br className="hidden md:block" /> syvää mielenrauhaa. </h2>
+          <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight"> Kehon voimaa, palautumista ja <br className="hidden md:block" /> tasapainoa. </h2>
         </div>
 
         {/* Nostot */}

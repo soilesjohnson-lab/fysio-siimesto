@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 import { client } from '../sanityClient';
 import ServiceCard from '../components/ServiceCard';
 import scrollToTop from "../hooks/scrollToTop";
+import { NavLink } from 'react-router-dom';
+
+const links = [
+  { to: '/services', label: 'Palvelut' }
+];
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -83,6 +88,37 @@ const Services = () => {
                 />
               ))}
         </div>
+
+        {/* Maksutavat ja korvaukset */}
+        <div className="mt-24 max-w-3xl mx-auto text-center">
+          <h2 className="text-xl uppercase tracking-[0.3em] text-gray-900 mb-6">
+            Maksutavat ja korvaukset
+          </h2>
+
+          <p className="text-gray-700 mb-3">
+            Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong>.
+          </p>
+
+          <p className="text-gray-700 mb-6">
+            Meillä käy maksuvälineenä myös ePassi ja Edenred.
+          </p>
+
+          <p className="text-sm text-gray-500 mb-8">
+            Koti- ja laitoskuntoutuksesta voi olla mahdollista hakea kotitalousvähennystä.
+          </p>
+
+          {/* Logot */}
+          <div className="flex justify-center items-center gap-8">
+            <img src="/logos/epassi.svg" alt="ePassi maksutapa" className="h-10" />
+            <img src="/logos/edenred.svg" alt="Edenred maksutapa" className="h-10" />
+          </div>
+
+          {/* CTA-nappi */}
+          <div className="mt-20 text-center">
+            <NavLink to="/services" className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"> Varaa aika <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span></NavLink>
+          </div>
+        </div>
+
       </div>
     </div>
   );

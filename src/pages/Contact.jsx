@@ -171,7 +171,7 @@ export default function Contact() {
 
             <div className="bg-gray-50 border border-gray-200 rounded-md p-6 text-[11px] tracking-widest outline-none font-light space-y-4">
               <p style={textStyle}>
-                Toimipiste on samassa rakennuksessa kuin <strong>Sohvin valinta</strong>, mutta toisella puolella.
+                Toimipiste on samassa rakennuksessa kuin Sohvin valinta, mutta toisella puolella. Parkkipaikkoja löytyy myös Sohvin valinnan edestä.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
