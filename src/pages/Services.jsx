@@ -4,10 +4,6 @@ import ServiceCard from '../components/ServiceCard';
 import scrollToTop from "../hooks/scrollToTop";
 import { NavLink } from 'react-router-dom';
 
-const links = [
-  { to: '/services', label: 'Palvelut' }
-];
-
 const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,6 +37,11 @@ const Services = () => {
     fontFamily: "'Montserrat', sans-serif",
     letterSpacing: '0.3em',
     color: '#1a1a1a'
+  };
+
+  const textStyle = {
+    fontFamily: "'Montserrat', sans-serif",
+    color: "#777777",
   };
 
   scrollToTop();
@@ -90,33 +91,47 @@ const Services = () => {
         </div>
 
         {/* Maksutavat ja korvaukset */}
-        <div className="mt-24 max-w-3xl mx-auto text-center">
-          <h2 className="text-xl uppercase tracking-[0.3em] text-gray-900 mb-6">
+        <div className="mt-28 max-w-3xl mx-auto text-center">
+
+          <h2 className="text-xl uppercase tracking-[0.3em] text-gray-900">
             Maksutavat ja korvaukset
           </h2>
+          <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-12"></div>
 
-          <p className="text-gray-700 mb-3">
-            Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong>.
-          </p>
+          {/* Korvaukset */}
+          <div className="space-y-4 mb-12">
+            <p className="leading-relaxed font-light text-sm" style={textStyle}>
+              Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong>.
+            </p>
 
-          <p className="text-gray-700 mb-6">
-            Meillä käy maksuvälineenä myös ePassi ja Edenred.
-          </p>
-
-          <p className="text-sm text-gray-500 mb-8">
-            Koti- ja laitoskuntoutuksesta voi olla mahdollista hakea kotitalousvähennystä.
-          </p>
-
-          {/* Logot */}
-          <div className="flex justify-center items-center gap-8">
-            <img src="/logos/epassi.svg" alt="ePassi maksutapa" className="h-10" />
-            <img src="/logos/edenred.svg" alt="Edenred maksutapa" className="h-10" />
+            <p className="leading-relaxed font-light text-sm" style={textStyle}>
+              Koti- ja laitoskuntoutuksesta voi olla mahdollista hakea kotitalousvähennystä.
+            </p>
           </div>
 
-          {/* CTA-nappi */}
-          <div className="mt-20 text-center">
-            <NavLink to="/services" className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"> Varaa aika <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span></NavLink>
+          {/* Maksutavat */}
+          <div className="mb-12">
+            <p className="leading-relaxed font-light text-sm mb-6" style={textStyle}>
+              Meillä käy maksuvälineenä myös ePassi ja Edenred.
+            </p>
+
+            <div className="flex justify-center items-center gap-12">
+              <img src="/epassi.png" alt="ePassi maksutapa" className="h-10" />
+              <img src="/edenred.png" alt="Edenred maksutapa" className="h-10" />
+            </div>
           </div>
+
+          {/* CTA */}
+          <div className="mt-16">
+            <NavLink
+              to="/booking"
+              className="group relative inline-block px-12 py-5 bg-[#1a1a1a] text-white text-[10px] tracking-[0.4em] uppercase transition-all hover:bg-gray-800"
+            >
+              Varaa aika
+              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-8 h-[1px] bg-gray-300 group-hover:w-12 transition-all"></span>
+            </NavLink>
+          </div>
+
         </div>
 
       </div>
