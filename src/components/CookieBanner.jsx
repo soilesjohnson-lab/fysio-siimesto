@@ -7,7 +7,7 @@ export default function CookieBanner() {
     // Tarkistetaan onko käyttäjä jo hyväksynyt ehdot
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
-      // Pieni viive näyttämiseen, jotta sivu ehtii latautua kauniisti
+      // Pieni viive näyttämiseen, jotta sivu ehtii latautua
       const timer = setTimeout(() => setVisible(true), 1000);
       return () => clearTimeout(timer);
     }
@@ -22,7 +22,7 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white border border-gray-100 p-6 flex flex-col items-center shadow-xl z-[100] max-w-lg w-[90%] rounded-sm animate-fade-in">
-      
+
       <div className="text-center space-y-3 mb-6">
         <h4 className="text-[10px] tracking-[0.3em] uppercase font-semibold text-gray-800" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Tietosuoja & Evästeet

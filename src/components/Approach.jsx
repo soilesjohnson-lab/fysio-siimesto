@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { offerings } from "../data/offerings";
+import { offerings } from "../data/offerings.js";
 
 export default function Approach() {
   return (

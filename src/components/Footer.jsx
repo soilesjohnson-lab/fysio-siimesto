@@ -1,5 +1,5 @@
-import { contactInfo } from "../data/contactInfo"
-import { socialLinks } from "../data/socialLinks"
+import { contactInfo } from "../data/contactInfo.js"
+import { socialLinks } from "../data/socialLinks.js"
 
 export default function Footer() {
   return (
