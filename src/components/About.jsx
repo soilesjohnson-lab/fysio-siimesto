@@ -7,10 +7,10 @@ export default function About() {
   return (
     <section className="grid grid-cols-1 w-full bg-[#f9f8f6]">
       
-      {/* Kuva */}
+      {/* Henkilökuva */}
       <div className="row-start-1 col-start-1 h-[500px] md:h-[650px] w-full overflow-hidden relative">
         <img
-          src="/soile4.jpg"
+          src="/profile.jpg"
           alt="Soile - Fysio Siimestö"
           className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
           style={{ objectPosition: "left 20%" }}
@@ -19,7 +19,6 @@ export default function About() {
 
       {/* Sisältöalue */}
       <div className="row-start-1 col-start-1 flex flex-col items-center pt-[350px] md:pt-[450px] px-6 pb-24">
-        
         <div className="w-full max-w-3xl bg-white p-10 md:p-20 shadow-xl text-center z-10">
 
           {/* Otsikko */}
@@ -40,7 +39,7 @@ export default function About() {
             {!expanded && ( <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent pointer-events-none"></div> )}
           </div>
 
-          {/* Nappi */}
+          {/* Painike */}
           <div className="pt-10">
             <button onClick={() => setExpanded(!expanded)} className=" cursor-pointer inline-block pb-1 border-b border-gray-900 text-[11px] tracking-[0.3em] uppercase font-medium hover:opacity-50 transition-opacity"> {expanded ? "Sulje" : "Lue koko tarinani"} </button>
           </div>

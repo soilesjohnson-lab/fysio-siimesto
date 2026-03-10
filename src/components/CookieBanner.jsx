@@ -35,7 +35,7 @@ export default function CookieBanner() {
 
       <button
         onClick={acceptCookies}
-        className="px-10 py-3 bg-[#4a4a4a] text-white text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 w-full sm:w-auto"
+        className="px-10 py-3 bg-[#4a4a4a] text-white text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 w-full sm:w-auto cursor-pointer"
         style={{ fontFamily: "'Montserrat', sans-serif" }}
       >
         Hyväksy

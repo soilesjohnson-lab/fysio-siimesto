@@ -24,7 +24,7 @@ export default function Hero() {
           Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
         </p>
 
-        {/* Nappi */}
+        {/* Painike */}
         <div className="flex justify-center relative mt-6">
           <NavLink 
             to="/booking" 
