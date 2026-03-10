@@ -101,7 +101,7 @@ const Services = () => {
           {/* Korvaukset */}
           <div className="space-y-4 mb-12">
             <p className="leading-relaxed font-light text-sm" style={textStyle}>
-              Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong>.
+              Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong> enintään 4 kertaa vuodessa.
             </p>
 
             <p className="leading-relaxed font-light text-sm" style={textStyle}>
