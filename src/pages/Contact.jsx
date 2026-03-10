@@ -193,7 +193,7 @@ export default function Contact() {
                 </figure>
 
                 {/* Kuva 2 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer">
+                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105">
                   <div
                     className="relative rounded-sm overflow-hidden group"
                     onClick={() => setZoomedImage("/door.jpg")}
@@ -201,7 +201,7 @@ export default function Contact() {
                     <img
                       src="/door.jpg"
                       alt="Oven sijainti"
-                      className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                      className="w-full object-cover aspect-[4/3] rounded-sm"
                     />
                   </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
