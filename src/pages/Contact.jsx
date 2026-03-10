@@ -176,7 +176,7 @@ export default function Contact() {
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 {/* Kuva 1 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer">
+                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105">
                   <div
                     className="relative rounded-sm overflow-hidden group"
                     onClick={() => setZoomedImage("/signs.jpg")}
@@ -184,7 +184,7 @@ export default function Contact() {
                     <img
                       src="/signs.jpg"
                       alt="Käännös tieltä"
-                      className="w-full object-cover aspect-[4/3] rounded-sm transition-transform duration-300 group-hover:scale-105"
+                      className="w-full object-cover aspect-[4/3] rounded-sm"
                     />
                   </div>
                   <figcaption className="text-[10px] text-gray-600 mt-1 text-center">
