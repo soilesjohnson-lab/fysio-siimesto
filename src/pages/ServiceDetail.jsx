@@ -1,3 +1,5 @@
+// Siirrä tämä tiedosto komponentteihin tai dataan, varmaan komponentteihin
+
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { client } from "../sanityClient";

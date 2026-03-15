@@ -17,7 +17,6 @@ const ServiceCard = ({ title, description, image, options, id }) => {
             alt={title} 
             className="w-full h-full object-cover"
           />
-          {/* Hillitty väripesu overlay */}
           <div className="absolute inset-0 bg-gray-100/8 pointer-events-none"></div>
         </div>
       )}
@@ -32,7 +31,7 @@ const ServiceCard = ({ title, description, image, options, id }) => {
           {description} 
         </p>
 
-        {/* Hinnasto-osio */}
+        {/* Hinnasto */}
         {options && options.length > 0 && (
           <div className="mb-8 border-t border-gray-100 pt-6">
             <ul className="space-y-4">
@@ -50,7 +49,7 @@ const ServiceCard = ({ title, description, image, options, id }) => {
           </div>
         )}
 
-        {/* Nappi */}
+        {/* Painike */}
         <div className="mt-auto pt-2">
           <Link
             to={`/services/${id}`}
