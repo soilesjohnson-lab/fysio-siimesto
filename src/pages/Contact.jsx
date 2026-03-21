@@ -176,7 +176,7 @@ export default function Contact() {
 
               <div className="flex flex-col sm:flex-row gap-4 mt-2">
                 {/* Kuva 1 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-102">
+                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-103">
                   <div
                     className="relative rounded-sm overflow-hidden group"
                     onClick={() => setZoomedImage("/signs.jpg")}
@@ -193,7 +193,7 @@ export default function Contact() {
                 </figure>
 
                 {/* Kuva 2 */}
-                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-102">
+                <figure className="w-full sm:w-1/2 cursor-pointer transition-transform duration-300 hover:scale-103">
                   <div
                     className="relative rounded-sm overflow-hidden group"
                     onClick={() => setZoomedImage("/door.jpg")}
