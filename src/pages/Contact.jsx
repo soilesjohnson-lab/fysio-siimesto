@@ -124,7 +124,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4"
+                className="cursor-pointer inline-block px-10 py-4 bg-[#4a4a4a] text-white text-[10px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 mt-4"
               >
                 Lähetä viesti
               </button>
