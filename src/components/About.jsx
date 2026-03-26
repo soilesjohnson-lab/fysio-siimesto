@@ -13,7 +13,7 @@ export default function About() {
           src="/profile.jpg"
           alt="Soile - Fysio Siimestö"
           className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
-          style={{ objectPosition: "left 20%" }}
+          style={{ objectPosition: "75% 15%" }}
         />
       </div>
 
