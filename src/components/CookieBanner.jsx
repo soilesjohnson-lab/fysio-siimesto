@@ -29,7 +29,7 @@ export default function CookieBanner() {
         </h4>
         <p className="text-[11px] leading-relaxed text-gray-500 tracking-wider font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Käytämme sivustolla kolmannen osapuolen palveluita (kuten <strong>Timma</strong> ja <strong>Google Maps</strong>) sujuvan käyttökokemuksen varmistamiseksi. 
-          Jatkamalla sivuston käyttöä hyväksyt <a href="/tietosuoja" className="underline hover:text-gray-800 transition-colors">tietosuojaselosteemme</a>.
+          Jatkamalla sivuston käyttöä hyväksyt <a href="/privacy-policy" className="underline hover:text-gray-800 transition-colors">tietosuojaselosteemme</a>.
         </p>
       </div>
 
