@@ -100,8 +100,8 @@ const Services = () => {
 
           {/* Korvaukset */}
           <div className="space-y-4 mb-12">
-            <p className="leading-relaxed font-light text-sm" style={textStyle}>
-              Fysioterapiasta on mahdollista saada <strong>Kela-korvaus 15 €</strong> (4 kertaa/vuosi).
+            <p className="leading-relaxed font-bold text-base" style={textStyle}>
+              Fysioterapiasta voi nyt saada saada 15€ Kela- korvauksen ilman lääkärin lähetettä (4 kertaa/vuosi, 15€ vähennetään hinnasta maksaessasi). 
             </p>
 
             <p className="leading-relaxed font-light text-sm" style={textStyle}>
