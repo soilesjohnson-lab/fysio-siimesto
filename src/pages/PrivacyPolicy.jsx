@@ -1,19 +1,28 @@
+import { useEffect } from "react";
 import scrollToTop from "../hooks/scrollToTop";
 
 export default function PrivacyPolicy() {
+
   scrollToTop();
 
-  // Etusivun tyyliä mukaileva leipäteksti
   const bodyTextStyle = "text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed";
-  
-  // Montserrat-tyylit otsikoille ja detaljeille
   const montserratStyle = { fontFamily: "'Montserrat', sans-serif" };
+
+  const handleResetCookies = () => {
+    
+    // 1. Poistetaan suostumus
+    localStorage.removeItem("cookieConsent");
+    
+    // 2. Ilmoitetaan muille komponenteille (kuten Navbar/Banner), että tila muuttui.
+    // Tämä tuo bannerin takaisin näkyviin ilman sivun latausta.
+    window.dispatchEvent(new Event("cookieChanged"));
+  };
 
   return (
     <div className="bg-white min-h-screen py-24 px-6">
       <div className="max-w-4xl mx-auto">
         
-        {/* Otsikko - Montserrat */}
+        {/* Otsikko */}
         <div className="mb-20 text-center border-gray-50 pb-6">
           <h1 className="section-title">Tietosuoja ja evästeet</h1>
           <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
@@ -22,7 +31,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
 
-        {/* Johdanto - Etusivun tyyli */}
+        {/* Johdanto */}
         <div className="mb-20 w-fit mx-auto max-w-3xl">
           <p className={bodyTextStyle}>
             Tämä sivusto on teknisesti staattinen, emmekä kerää tai tallenna henkilötietojasi suoraan sivuston kautta. 
@@ -31,7 +40,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="space-y-20">
-          {/* Sektio 1 */}
+          {/* 1 - Formspree */}
           <section className="max-w-3xl mx-auto">
             <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
               1. Yhteydenottolomake (Formspree)
@@ -46,7 +55,7 @@ export default function PrivacyPolicy() {
             </a>
           </section>
 
-          {/* Sektio 2 */}
+          {/* 2 - Timma */}
           <section className="max-w-3xl mx-auto">
             <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
               2. Ajanvaraus (Timma)
@@ -61,7 +70,7 @@ export default function PrivacyPolicy() {
             </a>
           </section>
 
-          {/* Sektio 3 */}
+          {/* 3 - Google */}
           <section className="max-w-3xl mx-auto">
             <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
               3. Karttapalvelu (Google Maps)
@@ -75,14 +84,24 @@ export default function PrivacyPolicy() {
             </a>
           </section>
 
-          {/* Sektio 4 */}
-          <section className="max-w-3xl mx-auto pb-20">
+          {/* 4 - Evästeet */}
+          <section className="max-w-3xl mx-auto pb-0">
             <h3 className="text-xs tracking-[0.3em] uppercase font-semibold mb-6 text-gray-800" style={montserratStyle}>
               4. Evästeet
             </h3>
             <p className={bodyTextStyle}>
-              Sivusto ei aseta markkinointi- tai seurantaevästeitä. Kolmannen osapuolen upotukset, kuten Timma tai Google Maps saattavat kuitenkin asettaa teknisiä evästeitä, jotka ovat välttämättömiä kyseisten palveluiden toiminnalle.
+              Sivusto ei aseta markkinointi- tai seurantaevästeitä. Kolmannen osapuolen upotukset, kuten Timma tai Google Maps, saattavat kuitenkin asettaa teknisiä evästeitä, jotka ovat välttämättömiä kyseisten palveluiden toiminnalle.
             </p>
+
+            <div className="mt-16 flex flex-col items-center">
+              <button
+                onClick={handleResetCookies}
+                className="px-10 py-4 bg-[#4a4a4a] text-white text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                style={montserratStyle}
+              >
+                Tyhjennä evästeasetukset
+              </button>
+            </div>
           </section>
         </div>
       </div>

@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import scrollToTop from "../hooks/scrollToTop";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,12 +13,29 @@ export default function Contact() {
   const [status, setStatus] = useState(""); // "" | "sent" | "error"
   const [zoomedImage, setZoomedImage] = useState(null);
 
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
   const textStyle = {
     fontFamily: "'Montserrat', sans-serif",
     color: "#777777",
   };
 
   scrollToTop();
+
+  useEffect(() => {
+    const checkConsent = () => {
+      const consent = localStorage.getItem("cookieConsent");
+      setCookiesAccepted(consent === "true");
+    };
+
+    checkConsent();
+
+    window.addEventListener("cookieChanged", checkConsent);
+
+    return () => {
+      window.removeEventListener("cookieChanged", checkConsent);
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -151,15 +169,40 @@ export default function Contact() {
               Vastaanotto
             </h3>
 
+            {/* Google Maps placeholder */}
             <div className="relative w-full pb-[60%] overflow-hidden rounded-sm grayscale-[0.5] hover:grayscale-0 transition-all duration-500">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.2894790911687!2d29.773324193769117!3d62.611034912366016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469b865fbf57aab5%3A0x870eaefd3ea08ba2!2sTeollisuuskatu%2011%2C%2080100%20Joensuu!5e1!3m2!1sfi!2sfi!4v1770414935106!5m2!1sfi!2sfi"
-                title="Fysio Siimestö"
-                className="absolute top-0 left-0 w-full h-full border-0"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              {cookiesAccepted ? (
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d948.2894790911687!2d29.773324193769117!3d62.611034912366016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469b865fbf57aab5%3A0x870eaefd3ea08ba2!2sTeollisuuskatu%2011%2C%2080100%20Joensuu!5e1!3m2!1sfi!2sfi!4v1770414935106!5m2!1sfi!2sfi"
+                  title="Fysio Siimestö"
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <div className="flex items-center justify-center bg-gray-50 text-center p-4 rounded-sm border border-gray-200 h-full">
+                  <div className="py-5">
+                    <p className="text-[11px] text-gray-600 font-light" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                      Kartta ei ole käytössä ilman evästeiden hyväksyntää. <br />
+                      Jatkamalla sivuston käyttöä hyväksyt{" "}
+                      <a href="/privacy-policy" className="underline hover:text-gray-800 transition-colors">
+                        tietosuojaselosteen
+                      </a>.
+                    </p>
+
+                    <button
+                      onClick={() => {
+                        localStorage.setItem("cookieConsent", "true");
+                        window.dispatchEvent(new Event("cookieChanged"));
+                      }}
+                      className="px-10 py-3 mt-5 border-2 border-[#4a4a4a] text-[#4a4a4a] text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] hover:text-white transition-all duration-300 w-full sm:w-auto cursor-pointer"
+                    >
+                      Hyväksy evästeet
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
 
             <h3

@@ -4,18 +4,36 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Tarkistetaan onko käyttäjä jo hyväksynyt ehdot
-    const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-      // Pieni viive näyttämiseen, jotta sivu ehtii latautua
-      const timer = setTimeout(() => setVisible(true), 1000);
-      return () => clearTimeout(timer);
-    }
+    const checkConsent = () => {
+      const consent = localStorage.getItem("cookieConsent");
+
+      if (!consent) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    const timer = setTimeout(checkConsent, 1000);
+
+    window.addEventListener("cookieChanged", checkConsent);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("cookieChanged", checkConsent);
+    };
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem("cookieConsent", "true");
-    setVisible(false);
+    window.dispatchEvent(new Event("cookieChanged"));
+
+    loadAnalytics();
+  };
+
+  const rejectCookies = () => {
+    localStorage.setItem("cookieConsent", "rejected");
+    window.dispatchEvent(new Event("cookieChanged"));
   };
 
   if (!visible) return null;
@@ -33,13 +51,20 @@ export default function CookieBanner() {
         </p>
       </div>
 
-      <button
-        onClick={acceptCookies}
-        className="px-10 py-3 bg-[#4a4a4a] text-white text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 w-full sm:w-auto cursor-pointer"
-        style={{ fontFamily: "'Montserrat', sans-serif" }}
-      >
-        Hyväksy
-      </button>
+      <div className="flex gap-3 w-full justify-center">
+        <button
+          onClick={acceptCookies}
+          className="px-10 py-3 bg-[#4a4a4a] text-white text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] transition-all duration-300 w-full sm:w-auto cursor-pointer"
+          style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          Hyväksy
+        </button>
+        <button
+          onClick={rejectCookies}
+          className="px-10 py-3 border-2 border-[#4a4a4a] text-[#4a4a4a] text-[9px] tracking-[0.3em] uppercase font-medium rounded-sm hover:bg-[#262626] hover:text-white transition-all duration-300 w-full sm:w-auto cursor-pointer"
+          style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          Hylkää
+        </button>
+      </div>
     </div>
   );
 }
