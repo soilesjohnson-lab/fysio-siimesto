@@ -111,14 +111,29 @@ const Services = () => {
 
           {/* Maksutavat */}
           <div className="mb-12">
-            <p className="leading-relaxed font-light text-sm mb-6" style={textStyle}>
+            <p
+              className="leading-relaxed font-light text-sm mb-6 text-center sm:text-left"
+              style={textStyle}
+            >
               Meillä käy maksuvälineenä myös ePassi, Edenred ja Smartum.
             </p>
 
-            <div className="flex justify-center items-center gap-12">
-              <img src="/epassi.png" alt="ePassi maksutapa" className="h-10" />
-              <img src="/edenred.png" alt="Edenred maksutapa" className="h-10 ml-10" />
-              <img src="/smartum.png" alt="Smartum maksutapa" className="h-20" />
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10">
+              <img
+                src="/epassi.png"
+                alt="ePassi maksutapa"
+                className="h-8 sm:h-10 object-contain"
+              />
+              <img
+                src="/edenred.png"
+                alt="Edenred maksutapa"
+                className="h-8 sm:h-10 object-contain"
+              />
+              <img
+                src="/smartum.png"
+                alt="Smartum maksutapa"
+                className="h-12 sm:h-16 object-contain"
+              />
             </div>
           </div>
 
