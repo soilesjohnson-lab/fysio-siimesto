@@ -31,6 +31,18 @@ export default {
 
     // ===== SERVICES =====
     {
+      name: 'approachTitleLine1',
+      title: 'Otsikko (1. rivi)',
+      type: 'string',
+      fieldset: 'services'
+    },
+    {
+      name: 'approachTitleLine2',
+      title: 'Otsikko (2. rivi)',
+      type: 'string',
+      fieldset: 'services'
+    },
+    {
       name: 'servicesList',
       title: 'Palvelut',
       type: 'array',

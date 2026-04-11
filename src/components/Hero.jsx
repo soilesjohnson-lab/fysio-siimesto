@@ -1,12 +1,28 @@
 import { NavLink } from 'react-router-dom';
+import { createImageUrlBuilder } from "@sanity/image-url";
+import { client } from "../sanityClient";
 
-export default function Hero() {
+const builder = createImageUrlBuilder(client);
+
+function urlFor(source) {
+  return builder.image(source);
+}
+
+export default function Hero({ data }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
       
       {/* Kuva */}
       <img
-        src="/hero.jpg"
+        src={
+          data?.image
+            ? urlFor(data.image)
+                .width(2000)
+                .quality(100)
+                .fit("max")
+                .url()
+            : "/hero.jpg"
+        }
         alt="Hero"
         className="absolute inset-0 w-full h-full object-cover brightness-[0.9] pointer-events-none"
       />
@@ -16,12 +32,14 @@ export default function Hero() {
 
         {/* Pääotsikko */}
         <h1 className="hero-title relative text-white">
-          Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien
+          {/* Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien */}
+          {data.title}
         </h1>
 
         {/* Alaotsikko */}
         <p className="hero-subtext relative text-white/90">
-          Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena.
+          {/* Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena. */}
+          {data.subtitle}
         </p>
 
         {/* Painike */}

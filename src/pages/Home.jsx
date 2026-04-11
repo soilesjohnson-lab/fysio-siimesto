@@ -1,17 +1,40 @@
 import Hero from '../components/Hero';
 import Approach from '../components/Approach';
 import About from '../components/About';
-import scrollToTop from "../hooks/scrollToTop";
+import { useEffect, useState } from "react";
+import { client } from "../sanityClient";
 
 export default function Home() {
+  const [data, setData] = useState(null);
 
-  scrollToTop();
-  
+  useEffect(() => {
+    client.fetch(`*[_type == "home"][0]{
+      title,
+      subtitle,
+      image,
+      approachTitleLine1,
+      approachTitleLine2,
+      servicesList,
+      aboutTitle,
+      aboutContent,
+      aboutImage
+    }`).then((res) => {
+      console.log("SANITY DATA:", res);
+      setData(res);
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (!data) return <div>Loading...</div>;
+
   return (
     <div className="bg-white min-h-screen">
-      <Hero />
-      <Approach />
-      <About />
+      <Hero data={data} />
+      <Approach data={data} />
+      <About data={data} />
     </div>
   );
 }
