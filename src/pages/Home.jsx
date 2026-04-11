@@ -28,7 +28,13 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!data) return <div>Loading...</div>;
+  if (!data) {
+    return (
+      <div className="min-h-screen bg-white animate-pulse">
+        <div className="h-screen bg-gray-100" />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white min-h-screen">

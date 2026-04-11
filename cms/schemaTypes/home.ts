@@ -3,7 +3,7 @@ export default {
   title: 'Etusivu',
   type: 'document',
   fieldsets: [
-    { name: 'hero', title: 'Hero', options: { collapsible: true, collapsed: false } },
+    { name: 'hero', title: 'Hero', options: { collapsible: true, collapsed: true } },
     { name: 'services', title: 'Palvelut / Nostot', options: { collapsible: true, collapsed: true } },
     { name: 'about', title: 'Yrittäjätarina', options: { collapsible: true, collapsed: true } }
   ],
