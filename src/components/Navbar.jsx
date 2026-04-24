@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-26">
 
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 flex items-center">
+          <Link to="/" className="flex-shrink-0 flex items-center" aria-label="Etusivu">
             <img src="/logo.png" alt="Fysio Siimestö" className="h-10 w-auto" />
           </Link>
 

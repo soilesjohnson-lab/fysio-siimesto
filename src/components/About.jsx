@@ -26,7 +26,7 @@ export default function About({ data }) {
             .fit("max")
             .url()
           }
-          alt="Henkilökuva"
+          alt="Fysioterapeuttin Soile Siimestö-Johnson"
           className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
         />
       </div>
@@ -37,7 +37,8 @@ export default function About({ data }) {
 
           {/* Otsikko */}
           <h2 className="title-style">
-            {data.aboutTitle}
+            {/* {data.aboutTitle} */}
+            {data.aboutTitle || "Kokonaisvaltaista fysioterapiaa Joensuussa"}
           </h2>
 
           {/* Teksti */}

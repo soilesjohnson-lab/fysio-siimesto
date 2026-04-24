@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { client } from '../sanityClient';
 import ServiceCard from '../components/ServiceCard';
-import scrollToTop from "../hooks/scrollToTop";
 import { NavLink } from 'react-router-dom';
 
 const Services = () => {
@@ -44,7 +43,9 @@ const Services = () => {
     color: "#777777",
   };
 
-  scrollToTop();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen py-24 px-6 md:px-12">
@@ -112,7 +113,7 @@ const Services = () => {
           {/* Maksutavat */}
           <div className="mb-12">
             <p
-              className="leading-relaxed font-light text-sm mb-6 text-center sm:text-left"
+              className="leading-relaxed font-light text-sm mb-6 text-center sm:text-center"
               style={textStyle}
             >
               Meillä käy maksuvälineenä myös ePassi, Edenred ja Smartum.

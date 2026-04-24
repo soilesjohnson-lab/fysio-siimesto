@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import scrollToTop from "../hooks/scrollToTop";
 import { loadTimmaWidget } from "../utils";
 
 export default function Booking() {

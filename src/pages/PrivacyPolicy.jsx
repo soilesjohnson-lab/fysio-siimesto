@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import scrollToTop from "../hooks/scrollToTop";
 
 export default function PrivacyPolicy() {
 
-  scrollToTop();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const bodyTextStyle = "text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed";
   const montserratStyle = { fontFamily: "'Montserrat', sans-serif" };

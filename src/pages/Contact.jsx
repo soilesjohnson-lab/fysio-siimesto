@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import scrollToTop from "../hooks/scrollToTop";
-
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,7 +18,9 @@ export default function Contact() {
     color: "#777777",
   };
 
-  scrollToTop();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkConsent = () => {
