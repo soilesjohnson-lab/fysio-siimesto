@@ -14,7 +14,6 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col bg-white font-raleway text-gray-900">
         <Navbar />
-
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,7 +24,6 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
-
         <Footer />
         <CookieBanner />
       </div>

@@ -3,6 +3,7 @@ import Approach from '../components/Approach';
 import About from '../components/About';
 import { useEffect, useState } from "react";
 import { client } from "../sanityClient";
+import SEO from '../components/SEO';
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -37,10 +38,18 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-white min-h-screen">
-      <Hero data={data} />
-      <Approach data={data} />
-      <About data={data} />
-    </div>
+    <>
+      <SEO 
+          title="Etusivu" 
+          description="Asiantuntevaa fysioterapiaa, hierontaa ja kuntoutusta Lieksassa. Tervetuloa Fysiosii-mesto-vastaanotolle." 
+          path="/" 
+        />
+
+      <div className="bg-white min-h-screen">
+        <Hero data={data} />
+        <Approach data={data} />
+        <About data={data} />
+      </div>
+    </>
   );
 }
