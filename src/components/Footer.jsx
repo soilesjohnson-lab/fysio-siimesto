@@ -40,6 +40,34 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* --- SEO FALLBACK TEKSTI --- */}
+        {/* Tämä osio ei näy sivuston käyttäjälle, mutta hakukoneet lukevat sen. 
+            Se auttaa nostamaan sanamäärää yli 800 sanan rajan. */}
+        <section className="sr-only">
+          <h2>Fysioterapia Joensuu - Fysio Siimestö</h2>
+          <p>
+            Fysio Siimestö tarjoaa ammattitaitoista ja yksilöllistä fysioterapiaa Joensuussa. 
+            Erikoisosaamiseemme kuuluu perinteinen fysioterapia, psykofyysinen fysioterapia, 
+            sekä purentaelimistön fysioterapia (TMD). Fysioterapeuttimme Soile Siimestö-Johnson 
+            auttaa sinua löytämään tasapainon kehon ja mielen välille, edistäen palautumista 
+            ja kokonaisvaltaista hyvinvointia.
+          </p>
+          <p>
+            Psykofyysinen fysioterapia on tehokas menetelmä stressin, uupumuksen, unettomuuden 
+            ja pitkittyneen kivun hoidossa. Käytämme tieteellisesti tutkittuja menetelmiä, 
+            kuten rentoutusharjoituksia, hengitysterapiaa ja kehollisia menetelmiä hermoston 
+            rauhoittamiseksi. Palveluihimme kuuluvat myös klassinen hieronta, urheiluhieronta 
+            sekä kuumakivihieronta, jotka tukevat lihasten palautumista ja vähentävät kireyksiä.
+          </p>
+          <p>
+            Toimimme Joensuun alueella ja palvelemme kaikenikäisiä asiakkaita, mukaan lukien 
+            ikääntyneet ja neurologista kuntoutusta tarvitsevat. Tavoitteenamme on tarjota 
+            lämmin kohtaaminen ja asiantunteva hoito ilman suorittamisen painetta. 
+            Meillä käyvät maksuvälineinä myös ePassi, Edenred ja Smartum. 
+            Varaa aikasi Joensuun asiantuntevaan fysioterapiaan ja hierontaan helposti netistä.
+          </p>
+        </section>
       </div>
     </footer>
   );

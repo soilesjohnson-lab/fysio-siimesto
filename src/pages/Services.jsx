@@ -85,6 +85,20 @@ const Services = () => {
                         <div className="h-3 bg-gray-200 rounded w-full" />
                       </div>
                     </div>
+
+                    <div className="sr-only">
+                      <h2>Fysioterapia Joensuu - Palvelut</h2>
+                      <p>
+                        Tarjoamme asiantuntevaa fysioterapiaa, psykofyysistä fysioterapiaa ja 
+                        purentaelimistön hoitoa Joensuun alueella. Soile Siimestö-Johnson on 
+                        erikoistunut kokonaisvaltaiseen kuntoutukseen, joka huomioi kehon ja mielen yhteyden.
+                      </p>
+                      <p>
+                        Palveluihimme kuuluvat muun muassa unettomuuden hoito, stressinhallinta, 
+                        neurologinen fysioterapia sekä ikääntyneiden kuntoutus. Varaa aikasi 
+                        ammattitaitoiseen hoitoon ja paranna toimintakykyäsi jo tänään.
+                      </p>
+                    </div>
                   </div>
                 ))
               : services.map((service) => (
