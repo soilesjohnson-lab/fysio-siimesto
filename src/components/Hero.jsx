@@ -17,13 +17,16 @@ export default function Hero({ data }) {
         src={
           data?.image
             ? urlFor(data.image)
-                .width(2000)
-                .quality(100)
+                .width(1600)
+                .quality(75)
+                .auto('format')
                 .fit("max")
                 .url()
             : "/hero.jpg"
         }
         alt={data?.title || "Fysio Siimestö - Fysioterapiaa Joensuussa"}
+        loading="eager"
+        fetchpriority="high"
         className="absolute inset-0 w-full h-full object-cover brightness-[0.9] pointer-events-none"
       />
 

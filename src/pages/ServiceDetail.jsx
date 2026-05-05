@@ -59,9 +59,9 @@ const ServiceDetail = () => {
 
                 if (trimmed.startsWith("## ")) {
                     return (
-                    <h3 key={idx} className="text-xl font-semibold mt-8">
+                    <h2 key={idx} className="text-xl font-semibold mt-8">
                         {trimmed.replace("## ", "")}
-                    </h3>
+                    </h2>
                     );
                 }
 

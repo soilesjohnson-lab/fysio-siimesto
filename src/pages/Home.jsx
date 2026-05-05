@@ -41,7 +41,7 @@ export default function Home() {
     <>
       <SEO 
           title="Etusivu" 
-          description="Asiantuntevaa fysioterapiaa, hierontaa ja kuntoutusta Lieksassa. Tervetuloa Fysiosii-mesto-vastaanotolle." 
+          description="Asiantuntevaa fysioterapiaa, hierontaa ja kuntoutusta Joensuussa. Tervetuloa Fysiosiimeston vastaanotolle." 
           path="/" 
         />
 

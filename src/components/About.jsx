@@ -22,11 +22,12 @@ export default function About({ data }) {
           src={
             urlFor(data.aboutImage)
             .width(1600)
-            .quality(100)
+            .quality(75)
+            .auto('format')
             .fit("max")
             .url()
           }
-          alt="Fysioterapeuttin Soile Siimestö-Johnson"
+          alt="Fysioterapeutti Soile Siimestö-Johnson"
           className="absolute top-0 left-0 h-full w-full object-cover origin-left scale-110"
         />
       </div>
@@ -36,9 +37,8 @@ export default function About({ data }) {
         <div className="w-full max-w-3xl bg-white p-10 md:p-20 shadow-xl text-center z-10">
 
           {/* Otsikko */}
-          <h2 className="title-style">
-            {/* {data.aboutTitle} */}
-            {data.aboutTitle || "Kokonaisvaltaista fysioterapiaa Joensuussa"}
+          <h2 className="text-2xl md:text-3xl font-light uppercase tracking-widest mb-8 text-[#1a1a1a]">
+            {data?.aboutTitle || "Kokonaisvaltaista fysioterapiaa Joensuussa"}
           </h2>
 
           {/* Teksti */}
@@ -48,7 +48,22 @@ export default function About({ data }) {
                 expanded ? "max-h-[2000px]" : "max-h-[300px] overflow-hidden"
               }`}
             >
-              <PortableText value={data.aboutContent} />
+              {data.aboutContent ? (
+                <PortableText value={data.aboutContent} />
+              ) : (
+                <div className="space-y-6">
+                  <p>
+                    Olen <strong>Soile Siimestö-Johnson</strong>, fysioterapeutti, psykofyysinen fysioterapeutti ja personal trainer. 
+                    Työssäni minua ohjaa ajatus siitä, että kestävä toimintakyky, jaksaminen ja hyvinvointi rakentuvat kehon, mielen ja hermoston tasapainosta – lempeästi, kuunnellen ja kokonaisuutta kunnioittaen.
+                  </p>
+                  <p>
+                    Minulla on omakohtaista kokemusta liiallisesta kuormittumisesta ja unettomuudesta. Tuo matka on opettanut minulle, kuinka suuri merkitys palautumisella, hermoston rauhoittumisella ja kehollisella turvan tunteella on hyvinvoinnille – eikä vain levon, vaan myös toimintakyvyn ja arjessa jaksamisen kannalta.
+                  </p>
+                  <p>
+                    Työskentelen kaikenikäisten kanssa Joensuussa, ja minulla on runsaasti kokemusta myös ikääntyneiden, muistisairaiden sekä neurologisen fysioterapian toteuttamisesta. Kohtaan jokaisen asiakkaan yksilöllisesti, lämmöllä ja rauhassa – tavoitteena on parantaa toimintakykyä ja tukea arjessa selviytymistä.
+                  </p>
+                </div>
+              )}
             </div>
 
             {!expanded && (
