@@ -50,10 +50,10 @@ const Services = () => {
 
   return (
     <>
-      <SEO 
-        title="Palvelut" 
-        description="Tutustu laadukkaisiin fysioterapia- ja hierontapalveluihimme Joensuussa." 
-        path="/services" 
+      <SEO
+        title="Fysioterapiapalvelut Joensuussa"
+        description="Tutustu perinteiseen ja psykofyysiseen fysioterapiaan sekä hoitomenetelmiin."
+        path="/services"
       />
 
       <div className="bg-white min-h-screen py-24 px-6 md:px-12">

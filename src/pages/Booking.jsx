@@ -29,10 +29,10 @@ export default function Booking() {
 
   return (
     <>
-      <SEO 
-        title="Ajanvaraus" 
-        description="Varaa aikasi fysioterapiaan tai hierontaan helposti verkossa." 
-        path="/booking" 
+      <SEO
+        title="Ajanvaraus fysioterapia Joensuu"
+        description="Varaa aika fysioterapiaan helposti verkossa Joensuussa."
+        path="/booking"
       />
 
       <div className="bg-white pt-24 pb-4 px-6 md:px-12">

@@ -76,10 +76,10 @@ export default function Contact() {
 
   return (
     <>
-      <SEO 
-        title="Yhteystiedot" 
-        description="Ota yhteyttä ja varaa aika." 
-        path="/contact" 
+      <SEO
+        title="Yhteystiedot | Fysioterapeutti Joensuu"
+        description="Ota yhteyttä Fysio Siimestöön ja varaa aika fysioterapiaan Joensuussa."
+        path="/contact"
       />
 
       <div className="bg-white min-h-screen py-24 px-6">

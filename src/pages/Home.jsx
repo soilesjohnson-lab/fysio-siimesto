@@ -39,11 +39,11 @@ export default function Home() {
 
   return (
     <>
-      <SEO 
-          title="Etusivu" 
-          description="Asiantuntevaa fysioterapiaa, hierontaa ja kuntoutusta Joensuussa. Tervetuloa Fysiosiimeston vastaanotolle." 
-          path="/" 
-        />
+      <SEO
+        title="Fysioterapia Joensuu | Fysio Siimestö"
+        description="Perinteinen ja psykofyysinen fysioterapia Joensuussa. Yksilöllistä hoitoa kipuun, jännityksiin ja kuntoutukseen."
+        path="/"
+      />
 
       <div className="bg-white min-h-screen">
         <Hero data={data} />
