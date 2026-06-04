@@ -37,20 +37,15 @@ export default function Booking() {
 
       <div className="bg-white pt-24 pb-4 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          
-          {/* Otsikko - tiivistetty mb-20 -> mb-8 */}
+          {/* Otsikko */}
           <div className="mb-8 text-center">
             <h1 className="section-title">Varaa aika</h1>
             <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto"></div>
           </div>
 
           {consent === "true" ? (
-            /* TÄRKEÄÄ: Ei korkeusasetuksia tässä divissä. 
-              Vain leveys, jotta utils.js määrittää korkeuden.
-            */
             <div id="timma-booking-widget" className="w-full" />
           ) : (
-            /* Evästekysely - näytetään vain jos ei hyväksyntää */
             <div className="w-full py-20 flex flex-col items-center justify-center bg-gray-50 border border-gray-200 rounded-sm p-6 text-center">
               <p className="text-[11px] text-gray-600 font-light mb-8" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                 Varaus-widget ei ole käytössä ilman evästeiden hyväksyntää. <br />

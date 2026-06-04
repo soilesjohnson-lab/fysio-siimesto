@@ -12,6 +12,10 @@ export const navLinks = [
         to: '/booking',
         label: 'Ajanvaraus'
     },
+        {
+        to: '/blog',
+        label: 'Blogi'
+    },
     {
         to: '/contact',
         label: 'Ota yhteyttä'

@@ -89,14 +89,10 @@ const Services = () => {
                     <div className="sr-only">
                       <h2>Fysioterapia Joensuu - Palvelut</h2>
                       <p>
-                        Tarjoamme asiantuntevaa fysioterapiaa, psykofyysistä fysioterapiaa ja 
-                        purentaelimistön hoitoa Joensuun alueella. Soile Siimestö-Johnson on 
-                        erikoistunut kokonaisvaltaiseen kuntoutukseen, joka huomioi kehon ja mielen yhteyden.
+                        Tarjoamme asiantuntevaa fysioterapiaa, psykofyysistä fysioterapiaa, perinteistä hierontaa, urheiluhierontaa sekä kuumakivihierontaa Joensuun alueella. Soile Siimestö-Johnson on erikoistunut kokonaisvaltaiseen kuntoutukseen, joka huomioi kehon ja mielen yhteyden.
                       </p>
                       <p>
-                        Palveluihimme kuuluvat muun muassa unettomuuden hoito, stressinhallinta, 
-                        neurologinen fysioterapia sekä ikääntyneiden kuntoutus. Varaa aikasi 
-                        ammattitaitoiseen hoitoon ja paranna toimintakykyäsi jo tänään.
+                        Tavoitteenamme on tukea toimintakykyäsi ja auttaa sinua saavuttamaan kehon tasapaino ammattitaitoisen hoidon avulla. Varaa aikasi ja löydä itsellesi sopiva hoitomuoto.
                       </p>
                     </div>
                   </div>

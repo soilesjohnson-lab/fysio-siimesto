@@ -50,7 +50,7 @@ const ServiceDetail = () => {
       )}
 
       {/* Sisältöalue */}
-      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12 text-sm md:text-base font-light tracking-wide text-gray-600 leading-relaxed text-left">
+      <div className="max-w-3xl mx-auto py-16 px-6 space-y-12 text-sm md:text-base font-light text-gray-600 leading-relaxed text-left">
         {service.content && (
             <div className="space-y-6 text-gray-800" style={textStyle}>
                 {service.content.split("\n").map((line, idx) => {
@@ -99,7 +99,7 @@ const ServiceDetail = () => {
 
         {/* Takaisin */}
         <div className="text-center mt-8">
-          <Link to="/services" className="inline-block text-gray-600 text-[10px] tracking-[0.2em] uppercase" style={{ fontFamily: "'Montserrat', sans-serif" }}> &larr; Takaisin palveluihin </Link>
+          <Link to="/services" className="inline-block text-gray-600 text-[10px] tracking-[0.2em] uppercase hover:text-black hover:text-xs transition-all duration-[400ms]" style={{ fontFamily: "'Montserrat', sans-serif" }}> &larr; Takaisin palveluihin </Link>
         </div>
       </div>
     </div>

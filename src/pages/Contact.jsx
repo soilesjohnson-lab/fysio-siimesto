@@ -86,7 +86,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto">
           {/* Otsikko */}
           <div className="mb-20 text-center">
-            <h2 className="section-title">Ota yhteyttä</h2>
+            <h1 className="section-title">Ota yhteyttä</h1>
             <div className="mt-4 h-[1px] w-12 bg-gray-200 mx-auto mb-6"></div>
             <p className="text-style">
               Täytä lomake ottaaksesi yhteyttä tai tutustu ohjeisiin vastaanotolle.
