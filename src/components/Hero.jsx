@@ -35,15 +35,11 @@ export default function Hero({ data }) {
 
         {/* Pääotsikko */}
         <h1 className="hero-title relative text-white">
-          {/* Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien */}
-          {/* {data.title} */}
           {data?.title || "Yksilöllistä fysioterapiaa jaksamista ja palautumista tukien"}
         </h1>
 
         {/* Alaotsikko */}
         <p className="hero-subtext relative text-white/90">
-          {/* Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena. */}
-          {/* {data.subtitle} */}
           {data?.subtitle || "Tarjoan perinteistä ja psykofyysistä fysioterapiaa, joka huomioi sinut kokonaisuutena."}
         </p>
 

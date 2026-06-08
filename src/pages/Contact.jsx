@@ -47,7 +47,7 @@ export default function Contact() {
     e.preventDefault();
 
     if (formData.company) {
-      // Honeypot täytetty → botti
+      // Honeypot täytetty = botti
       setStatus("error");
       return;
     }

@@ -13,7 +13,7 @@ export default function Approach({ data }) {
     <section className="py-24 bg-white px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Otsikko - Korjattu fallbackilla */}
+        {/* Otsikko */}
         <div className="text-center mb-20 space-y-4">
           <h2 className="text-2xl md:text-4xl font-light text-[#1a1a1a] leading-tight">
             {data?.approachTitleLine1 || "Kehon voimaa, palautumista"}
@@ -44,7 +44,6 @@ export default function Approach({ data }) {
           ))}
         </div>
 
-        {/* Piilotettu SEO-teksti - Nostaa sanamäärää entisestään */}
         {!hasData && (
           <div className="sr-only">
             <h3>Fysioterapeuttinen lähestymistapani</h3>
